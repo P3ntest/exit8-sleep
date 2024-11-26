@@ -1,0 +1,102 @@
+[gd_scene load_steps=8 format=4 uid="uid://bgypb1i7sxl76"]
+
+[ext_resource type="Texture2D" uid="uid://ckxk5cwmqhecn" path="res://assets/pngimg.com_-_pentagram_PNG23_optimized.png" id="1_ivrrt"]
+[ext_resource type="Script" path="res://src/anomalies/visibility_anomaly.gd" id="2_mgf3v"]
+[ext_resource type="Texture2D" uid="uid://c512kjrjnrw7w" path="res://assets/halloween/textures/Candles.png" id="3_g3mnr"]
+[ext_resource type="Texture2D" uid="uid://cn6kvsubdqnwg" path="res://assets/halloween/textures/Candles_Emissor.png" id="4_ttoyl"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_crbm5"]
+resource_name = "Candles"
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("3_g3mnr")
+emission_enabled = true
+emission_texture = ExtResource("4_ttoyl")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ianrk"]
+_surfaces = [{
+"aabb": AABB(-0.00111796, -0.00129066, -0.00108871, 0.00243128, 0.0029239, 0.00273863),
+"format": 34359742465,
+"index_count": 78,
+"index_data": PackedByteArray("AAABAAIAAgADAAAABAAFAAAAAAADAAQABgAHAAUABQAEAAYABQABAAAABwAIAAEABQAHAAEACQAIAAcABwAGAAkAAQAIAAkACQACAAEACgADAAIAAgALAAoADAANAAYABgAEAAwADgAJAAYABgANAA4ADAAEAAMAAwAKAAwADgALAAIAAgAJAA4ADwAQABEAEAASABEAEgAPABEA"),
+"name": "Candles",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 19,
+"vertex_data": PackedByteArray("8ZP8OZQiJDmjRY46AAAAAL7JBDq2p6w6AAAAAL7JBDqDURm68ZP8OZQiJDmDURm6ChqcOQjb1rmDURm6ChqcOQjb1rmY4Jk6ChqcuQjb1rmDURm6ChqcuQjb1rnSbr868ZP8uZQiJDnJCcs68ZP8uZQiJDmDURm6xiOsOuiLMTriso66c+exODMS1jriso66PRtZOtyZK7riso666R5KuoUrqbriso66Z4iSuogPRzriso66AAAAAFH3ibgYf6Q62PZuuE/3CTgYf6Q6AAAAAAAAAABzQtg62PZuOE/3CTgYf6Q6")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_iamxa"]
+resource_name = "Candle_02"
+_surfaces = [{
+"aabb": AABB(-0.00111796, -0.00129066, -0.00108871, 0.00243128, 0.0029239, 0.00273863),
+"attribute_data": PackedByteArray("T9LZPu5ZmD71SOk+jG1wPgvLVD6IbXA+C8tUPu5ZmD6jv9g9JOvXPqO/2D2ULEU+Ce83Prj8UD4J7zc+JOvXPsI7Ajx0Lf8+wjsCPOR2bT7LLK89mtiJPsssrz10Lf8+k6AjPwCH/zvnji0/ND4CPlN9HT/gFqc9PX03PwCH/zt8oD0/4BanPd7nGz8ofv4+pnWpPih+/j64Xa8+4iISP97nGz/iIhI/m7/4PjgnMD4My1Q+OCcwPnr9Pz8gLuI9G+FFP9TbcT6/FzU/iimOPg04Ez/0QFo+HkpjP5jnbj4eSmM/cEPqPrfSTT+kNbc+3ClVP0ZMkj77eR8/OjrNPpYAOj9Qp7Q+SSVFP/4bKT9re0M//hspP2AJRD+mBjQ/OkZFP/4bKT96WkM//hspP1pQRD+mBjQ/a3tDP/4bKT9JJUU//hspP2AJRD+mBjQ/"),
+"format": 34359742487,
+"index_count": 78,
+"index_data": PackedByteArray("AAABAAIAAgADAAAABAAFAAYABgAHAAQACAAJAAoACgALAAgADAANAA4ADwAQAA0ADAAPAA0AEQASABMAEwAUABEAAQAVABYAFgACAAEAFwAYABkAGQAaABcAGwAcAB0AHQAeABsAHwAgAB0AHQAcAB8AGwAeABgAGAAXABsAHwAaABkAGQAgAB8AIQAiACMAJAAlACYAJwAoACkA"),
+"material": SubResource("StandardMaterial3D_crbm5"),
+"name": "Candles",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 42,
+"vertex_data": PackedByteArray("8ZP8OZQiJDmjRY46AAAAAL7JBDq2p6w6AAAAAL7JBDqDURm68ZP8OZQiJDmDURm6ChqcOQjb1rmDURm6ChqcOQjb1rmY4Jk68ZP8OZQiJDmjRY468ZP8OZQiJDmDURm6ChqcuQjb1rmDURm6ChqcuQjb1rnSbr86ChqcOQjb1rmY4Jk6ChqcOQjb1rmDURm6ChqcOQjb1rmY4Jk6AAAAAL7JBDq2p6w68ZP8OZQiJDmjRY46ChqcuQjb1rnSbr868ZP8uZQiJDnJCcs68ZP8uZQiJDmDURm68ZP8uZQiJDnJCcs6ChqcuQjb1rnSbr86ChqcuQjb1rmDURm68ZP8uZQiJDnJCcs68ZP8uZQiJDmDURm6xiOsOuiLMTriso668ZP8OZQiJDmDURm6AAAAAL7JBDqDURm6c+exODMS1jriso66PRtZOtyZK7riso666R5KuoUrqbriso66ChqcuQjb1rmDURm6ChqcOQjb1rmDURm6Z4iSuogPRzriso668ZP8uZQiJDmDURm6AAAAAFH3ibgYf6Q62PZuuE/3CTgYf6Q6AAAAAAAAAABzQtg62PZuuE/3CTgYf6Q62PZuOE/3CTgYf6Q6AAAAAAAAAABzQtg62PZuOE/3CTgYf6Q6AAAAAFH3ibgYf6Q6AAAAAAAAAABzQtg6K8ljlRldGUU9bT3t/3//Pxl/isPKgMxdaL+Zjh1OvUU7pv9MK7J82+OrmE4KszHdK8ljlYVZF/hov5mONmOj//hcG04pyUixXkCgP17ALqDjq5hOKtoz4Dum/0zf3iXd46uYTgpEzLaUqf9/lCn/vyvJY5XEWXnIlKn/f5Qp/7+Uqf9/lCn/v98/p5BFDJ8XOxo7mv//AABeQKA///8AAPhcG05OJedyOxo7mv9//z/fP6eQPa8iRsalqY0AphmSaL+ZjhCubY8Zf4rD95upqBqBXqe5m0udgKNqYIbE54saa8ta7brPj/hcG04ZyLKTO6b/TKTU8obCWp+S7ppcnd8/p5BIiceYgzPXU9mukmiDM9dT2a6SaIMz11PZrpJo/38n9gAA/z//fyf2AAD/P/9/J/YAAP8/e8zXUyVRbJd7zNdTJVFsl3vM11MlUWyX")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_ianrk")
+
+[node name="Pentagram" type="Node3D"]
+transform = Transform3D(1.40177, 0, 0, 0, 1.40177, 0, 0, 0, 1.40177, -2.83357, 0.0941534, -5.85003)
+
+[node name="Decal" type="Decal" parent="."]
+texture_albedo = ExtResource("1_ivrrt")
+
+[node name="VisibilityAnomaly" type="Node3D" parent="."]
+script = ExtResource("2_mgf3v")
+
+[node name="Lights" type="Node3D" parent="."]
+
+[node name="Candle_02" type="MeshInstance3D" parent="Lights"]
+transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, -0.783949, 0, 0.203852)
+mesh = SubResource("ArrayMesh_iamxa")
+skeleton = NodePath("")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Lights/Candle_02"]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0.00208104)
+light_color = Color(0.910746, 0.472323, 0.0367199, 1)
+light_bake_mode = 0
+
+[node name="Candle_03" type="MeshInstance3D" parent="Lights"]
+transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, -0.544864, 0, -0.664406)
+mesh = SubResource("ArrayMesh_iamxa")
+skeleton = NodePath("")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Lights/Candle_03"]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0.00208104)
+light_color = Color(0.910746, 0.472323, 0.0367199, 1)
+
+[node name="Candle_04" type="MeshInstance3D" parent="Lights"]
+transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, 0.425414, 0, -0.669357)
+mesh = SubResource("ArrayMesh_iamxa")
+skeleton = NodePath("")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Lights/Candle_04"]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0.00208104)
+light_color = Color(0.910746, 0.472323, 0.0367199, 1)
+
+[node name="Candle_05" type="MeshInstance3D" parent="Lights"]
+transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, 0.707587, 0, 0.201913)
+mesh = SubResource("ArrayMesh_iamxa")
+skeleton = NodePath("")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Lights/Candle_05"]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0.00208104)
+light_color = Color(0.910746, 0.472323, 0.0367199, 1)
+
+[node name="Candle_06" type="MeshInstance3D" parent="Lights"]
+transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, -0.0522995, 0, 0.729131)
+mesh = SubResource("ArrayMesh_iamxa")
+skeleton = NodePath("")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Lights/Candle_06"]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0.00208104)
+light_color = Color(0.910746, 0.472323, 0.0367199, 1)

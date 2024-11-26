@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://bbhs1ybxfpnn"]
+
+[ext_resource type="PackedScene" uid="uid://hv574m4niytq" path="res://assets/PSX_Furniture, Appliances, And Others/FloorLamp.fbx_Scene/FloorLamp.fbx_Scene.fbx" id="1_xffjv"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_1cd75"]
+height = 1.55804
+radius = 0.117076
+
+[node name="Lamp" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.904784, 1.8999e-07, -1.41416)
+
+[node name="FloorLamp_fbx_Scene" parent="." instance=ExtResource("1_xffjv")]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="FloorLamp_fbx_Scene"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0105971, 1.98132, -0.0478017)
+light_color = Color(0.738759, 0.727833, 0.0144827, 1)
+light_energy = 2.0
+light_volumetric_fog_energy = 0.0
+shadow_enabled = true
+shadow_transmittance_bias = 7.646
+shadow_blur = 5.091
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.849094, 0)
+shape = SubResource("CylinderShape3D_1cd75")

@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://f0gglomtu0qp"]
+
+[ext_resource type="Script" path="res://src/level/components/alarm_clock.gd" id="1_fxlqw"]
+[ext_resource type="FontFile" uid="uid://doksxqpqikhjo" path="res://assets/Seven Segment.ttf" id="1_qtl65"]
+[ext_resource type="Script" path="res://src/anomalies/anomaly.gd" id="3_o83ti"]
+[ext_resource type="AudioStream" uid="uid://c0wlmmqormo35" path="res://assets/sounds/generic-alarm-clock-86759.ogg" id="4_ovgui"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iskvd"]
+albedo_color = Color(0, 0, 0, 1)
+
+[node name="AlarmClock" type="Node3D"]
+script = ExtResource("1_fxlqw")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.163574)
+material_override = SubResource("StandardMaterial3D_iskvd")
+size = Vector3(2.13257, 1, 0.672852)
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.504706)
+modulate = Color(0.94282, 0, 0.0763571, 1)
+text = "69:69 AM"
+font = ExtResource("1_qtl65")
+font_size = 110
+
+[node name="Anomaly666" type="Node3D" parent="."]
+script = ExtResource("3_o83ti")
+anomaly_name = "Devil Alarm Clock"
+
+[node name="AnomalyFast" type="Node3D" parent="."]
+script = ExtResource("3_o83ti")
+anomaly_name = "Super Fast Alarm Clock"
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("4_ovgui")
