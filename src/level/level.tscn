@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://buyuenw2t5v7m" path="res://assets/128x128/Wood/Wood_07-128x128.png" id="6_oo4ai"]
 [ext_resource type="Texture2D" uid="uid://btnsmj8m8hv5r" path="res://assets/128x128/Tile/Tile_08-128x128.png" id="7_1k4jf"]
 [ext_resource type="Texture2D" uid="uid://ccyetylihm0s6" path="res://assets/128x128/Stone/Stone_08-128x128.png" id="7_8q1ty"]
+[ext_resource type="PackedScene" uid="uid://oicjp4vhv4p3" path="res://src/level/components/dresser.tscn" id="8_2ns7m"]
 [ext_resource type="PackedScene" uid="uid://bgypb1i7sxl76" path="res://src/level/components/pentagram.tscn" id="8_fwap5"]
 [ext_resource type="Texture2D" uid="uid://d3n33gkq4g662" path="res://assets/output-onlinepngtools (1).png" id="9_4yj2q"]
 [ext_resource type="PackedScene" uid="uid://dlt5gxpog0udq" path="res://src/level/components/door.tscn" id="10_1un7q"]
@@ -39,15 +40,14 @@
 [ext_resource type="PackedScene" uid="uid://gps1a2myjvj5" path="res://assets/godot_plush/godot_plush V2.glb" id="35_6ga4m"]
 [ext_resource type="PackedScene" uid="uid://benlob8tsn8r4" path="res://src/level/components/tucker.tscn" id="37_pe075"]
 [ext_resource type="AudioStream" uid="uid://c63gce6fesk2g" path="res://assets/ambient-noise-236388.mp3" id="38_aebpg"]
-[ext_resource type="Texture2D" uid="uid://c5r2bqltnba4j" path="res://assets/PSX Pack 3/textures/Wood_08.jpg" id="39_chl70"]
-[ext_resource type="Texture2D" uid="uid://d3p0fa5b0glxx" path="res://assets/PSX Pack 3/textures/Electronics.jpg" id="40_8r53c"]
+[ext_resource type="Texture2D" uid="uid://c5r2bqltnba4j" path="res://assets/PSX Pack 3/Textures/Wood_08.jpg" id="39_chl70"]
+[ext_resource type="Texture2D" uid="uid://d3p0fa5b0glxx" path="res://assets/PSX Pack 3/Textures/Electronics.jpg" id="40_8r53c"]
 [ext_resource type="PackedScene" uid="uid://d4kskm178sc4w" path="res://src/level/components/pictures.tscn" id="41_of2yo"]
-[ext_resource type="Texture2D" uid="uid://ddj6hysjfd3h6" path="res://assets/PSX Pack 3/textures/Entertainment.png" id="42_2iccq"]
+[ext_resource type="Texture2D" uid="uid://ddj6hysjfd3h6" path="res://assets/PSX Pack 3/Textures/Entertainment.png" id="42_2iccq"]
 [ext_resource type="PackedScene" uid="uid://drmnm827oxs5c" path="res://src/level/components/mircowave.tscn" id="43_m72cl"]
-[ext_resource type="Texture2D" uid="uid://bis6u884r0jat" path="res://assets/halloween/textures/Body_01.png" id="44_nehk3"]
-[ext_resource type="Texture2D" uid="uid://bjqyycyl4apl2" path="res://assets/halloween/textures/Body_parts.png" id="45_gjfs6"]
-[ext_resource type="Texture2D" uid="uid://caxjmpahkvtdi" path="res://assets/halloween/textures/Coffin.png" id="46_faf0n"]
-[ext_resource type="VoxelGIData" uid="uid://cld6d8jt8epxs" path="res://src/level/level.VoxelGI_data.res" id="48_b7a5o"]
+[ext_resource type="Texture2D" uid="uid://bis6u884r0jat" path="res://assets/halloween/Textures/Body_01.png" id="44_nehk3"]
+[ext_resource type="Texture2D" uid="uid://bjqyycyl4apl2" path="res://assets/halloween/Textures/Body_parts.png" id="45_gjfs6"]
+[ext_resource type="Texture2D" uid="uid://caxjmpahkvtdi" path="res://assets/halloween/Textures/Coffin.png" id="46_faf0n"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ev13u"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -77,13 +77,11 @@ size = Vector3(0.892578, 1.23218, 0.797119)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sf0uo"]
 resource_name = "Metal"
 vertex_color_use_as_albedo = true
-albedo_color = Color(1, 1, 1, 1)
 emission_enabled = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m8p6b"]
 resource_name = "Electronics"
 vertex_color_use_as_albedo = true
-albedo_color = Color(1, 1, 1, 1)
 albedo_texture = ExtResource("40_8r53c")
 emission_enabled = true
 
@@ -286,7 +284,6 @@ size = Vector3(2.27148, 1.26782, 0.878174)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_34ego"]
 resource_name = "Wood_08"
 vertex_color_use_as_albedo = true
-albedo_color = Color(1, 1, 1, 1)
 albedo_texture = ExtResource("39_chl70")
 emission_enabled = true
 
@@ -387,7 +384,6 @@ shadow_mesh = SubResource("ArrayMesh_vkbjf")
 resource_name = "Entertainment"
 transparency = 4
 vertex_color_use_as_albedo = true
-albedo_color = Color(1, 1, 1, 1)
 albedo_texture = ExtResource("42_2iccq")
 emission_enabled = true
 
@@ -716,15 +712,7 @@ transform = Transform3D(1, 0, -3.55271e-15, 0, 1, 0, 3.55271e-15, 0, 1, 0, 0, 0)
 transform = Transform3D(1, 0, -5.68434e-14, 0, 1, 0, 5.68434e-14, 0, 1, 0, 0.495735, 0)
 shape = SubResource("BoxShape3D_eaqc2")
 
-[node name="Dresser2" type="StaticBody3D" parent="."]
-transform = Transform3D(-5.56307e-08, 0, 1.0213, 0, 1.0213, 0, -1.27268, 0, -4.46427e-08, -3.96843, -0.0279001, 4.81128)
-
-[node name="Dresser_fbx_Scene" parent="Dresser2" instance=ExtResource("4_6qthq")]
-transform = Transform3D(1, 0, -3.55271e-15, 0, 1, 0, 3.55271e-15, 0, 1, 0, 0, 0)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Dresser2"]
-transform = Transform3D(1, 0, -5.68434e-14, 0, 1, 0, 5.68434e-14, 0, 1, 0, 0.495735, 0)
-shape = SubResource("BoxShape3D_eaqc2")
+[node name="Dresser2" parent="." instance=ExtResource("8_2ns7m")]
 
 [node name="PlayerSpawn" type="Marker3D" parent="." groups=["player_spawn"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.89107, 0.0067441, -2.94539)
@@ -1207,10 +1195,5 @@ transform = Transform3D(-2.08724, 0, 2.28355e-07, 3.15164e-07, -6.6106e-08, 1.51
 script = ExtResource("18_1mdig")
 targets = [NodePath("../TV_02")]
 anti_targets = [NodePath("../TV_fbx_Scene")]
-
-[node name="VoxelGI" type="VoxelGI" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.538086, 1.41373, -1.40369)
-size = Vector3(18.9238, 3.25043, 15.4924)
-data = ExtResource("48_b7a5o")
 
 [editable path="Tucker"]

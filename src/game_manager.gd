@@ -34,13 +34,17 @@ func get_anomalies() -> Array[Anomaly]:
 	return anomalies
 
 const DEV_ALL_ANOMALIES = true
+var enabled_anomalies: Array[Anomaly] = []
 func enable_random_anomaly() -> void:
+	enabled_anomalies.clear()
 	if DEV_ALL_ANOMALIES:
 		for anomaly in get_anomalies():
 			anomaly.enable()
+			enabled_anomalies.append(anomaly)
 		return
 	var anomaly = get_anomalies().pick_random()
 	anomaly.enable()
+	enabled_anomalies.append(anomaly)
 	used_anomalies.append(anomaly.get_path().get_concatenated_names())
 
 func restart():
@@ -70,12 +74,19 @@ func on_exit():
 			pass
 		restart()
 	else:
+		print("lost due to anomaly not found")
+		for anomaly in enabled_anomalies:
+			print(anomaly.get_path().get_concatenated_names())
+			print(anomaly.name)
 		on_lost()
 		restart()
 
 var current_level: Node = null
 
-var current_day = 0 # = Monday
+var current_day: int = 0:
+	set(value):
+		current_day = value
+		anomaly_rounds = randi_range(0, 5)
 var round_has_anomaly = false
 
 func end_round() -> void:
@@ -86,11 +97,20 @@ func end_round() -> void:
 
 
 var grace_round = true
+var anomaly_rounds = 0
 func start_round() -> void:
+	print('starting round')
 	weekday_label.text = days[current_day]
 	day_text_label.text = "I should go to sleep soon." if current_day == 0 else "Am I dreaming?"
-	round_has_anomaly = randf() > 0.18
+	print('remaining anomaly rounds:', anomaly_rounds)
+	round_has_anomaly = anomaly_rounds > 0
+	if round_has_anomaly:
+		anomaly_rounds -= 1
+	
+	print('round has anomaly:', round_has_anomaly)
+
 	if grace_round:
+		print("never mind, grace round")
 		grace_round = false
 		round_has_anomaly = false
 
