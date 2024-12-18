@@ -6,6 +6,8 @@ extends Node3D
 @export var weekday_label: Label
 @export var day_text_label: Label
 
+@export var main_menu: PackedScene
+
 @onready var animation_player = $AnimationPlayer
 
 const days: Dictionary = {
@@ -22,6 +24,11 @@ func _ready() -> void:
 	add_to_group("game_manager")
 	start_round()
 
+var timer: float = 0.0
+func _process(delta):
+	if current_day != 0:
+		timer += delta
+
 var used_anomalies: Array[String] = []
 func get_anomalies() -> Array[Anomaly]:
 	var anomalies: Array[Anomaly] = []
@@ -33,7 +40,7 @@ func get_anomalies() -> Array[Anomaly]:
 		return get_anomalies()
 	return anomalies
 
-const DEV_ALL_ANOMALIES = true
+const DEV_ALL_ANOMALIES = false 
 var enabled_anomalies: Array[Anomaly] = []
 func enable_random_anomaly() -> void:
 	enabled_anomalies.clear()
@@ -70,7 +77,10 @@ func on_exit():
 	elif not round_has_anomaly:
 		current_day += 1
 		if current_day == len(days):
-			# Game over, player won
+			weekday_label.text = "You won!"
+			day_text_label.text = "It took you " + str(int(timer)) + " seconds to survive the week."
+			await get_tree().create_timer(5.0).timeout
+			get_tree().change_scene_to_packed(main_menu)
 			pass
 		restart()
 	else:
@@ -86,7 +96,7 @@ var current_level: Node = null
 var current_day: int = 0:
 	set(value):
 		current_day = value
-		anomaly_rounds = randi_range(0, 5)
+		anomaly_rounds = randi_range(0, 8)
 var round_has_anomaly = false
 
 func end_round() -> void:

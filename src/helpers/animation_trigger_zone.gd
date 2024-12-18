@@ -6,6 +6,10 @@ class_name AnimationTriggerZone extends Area3D
 
 @export var retrigger_area: Area3D
 
+var delay = 2
+func _process(delta):
+    delay -= delta
+
 func _ready():
     body_entered.connect(on_body_entered)
     if retrigger_area:
@@ -16,6 +20,8 @@ func _ready():
     
 var triggered = false
 func on_body_entered(body: Node) -> void:
+    if delay > 0:
+        return
     if not is_visible_in_tree():
         return
     if body.is_in_group("player"):
