@@ -1,53 +1,53 @@
 [gd_scene load_steps=105 format=4 uid="uid://crcjo0drf0uuc"]
 
-[ext_resource type="PackedScene" uid="uid://bkjsf5j2vqj44" path="res://assets/bed.glb" id="1_6ptno"]
-[ext_resource type="PackedScene" uid="uid://tw5t6nkijxuf" path="res://assets/PSX_Furniture, Appliances, And Others/Small_Tablefbx.fbx_Scene/Small_Tablefbx.fbx_Scene.fbx" id="2_4w51w"]
+[ext_resource type="PackedScene" uid="uid://bkjsf5j2vqj44" path="res://assets/models/bed.glb" id="1_6ptno"]
+[ext_resource type="PackedScene" uid="uid://tw5t6nkijxuf" path="res://assets/models/PSX_Furniture, Appliances, And Others/Small_Tablefbx.fbx_Scene/Small_Tablefbx.fbx_Scene.fbx" id="2_4w51w"]
 [ext_resource type="Script" path="res://src/components/interactable.gd" id="2_48h6m"]
-[ext_resource type="PackedScene" uid="uid://b8xcgkt8fr7wg" path="res://assets/PSX_Furniture, Appliances, And Others/Couch/Couch.fbx_Scene.fbm/Couch.fbx.fbx" id="3_eds81"]
-[ext_resource type="PackedScene" uid="uid://84kepgxeokox" path="res://assets/PSX_Furniture, Appliances, And Others/Dresser/Dresser.fbx_Scene/Dresser.fbx_Scene.fbx" id="4_6qthq"]
+[ext_resource type="PackedScene" uid="uid://b8xcgkt8fr7wg" path="res://assets/models/PSX_Furniture, Appliances, And Others/Couch/Couch.fbx_Scene.fbm/Couch.fbx.fbx" id="3_eds81"]
+[ext_resource type="PackedScene" uid="uid://84kepgxeokox" path="res://assets/models/PSX_Furniture, Appliances, And Others/Dresser/Dresser.fbx_Scene/Dresser.fbx_Scene.fbx" id="4_6qthq"]
 [ext_resource type="Script" path="res://src/anomalies/floating.gd" id="5_5tn3s"]
-[ext_resource type="Texture2D" uid="uid://cgxut5oms50nw" path="res://assets/128x128/Plaster/Plaster_20-128x128.png" id="6_8pq2r"]
-[ext_resource type="Texture2D" uid="uid://buyuenw2t5v7m" path="res://assets/128x128/Wood/Wood_07-128x128.png" id="6_oo4ai"]
-[ext_resource type="Texture2D" uid="uid://btnsmj8m8hv5r" path="res://assets/128x128/Tile/Tile_08-128x128.png" id="7_1k4jf"]
-[ext_resource type="Texture2D" uid="uid://ccyetylihm0s6" path="res://assets/128x128/Stone/Stone_08-128x128.png" id="7_8q1ty"]
+[ext_resource type="Texture2D" uid="uid://cgxut5oms50nw" path="res://assets/textures/psx_128x128/Plaster/Plaster_20-128x128.png" id="6_8pq2r"]
+[ext_resource type="Texture2D" uid="uid://buyuenw2t5v7m" path="res://assets/textures/psx_128x128/Wood/Wood_07-128x128.png" id="6_oo4ai"]
+[ext_resource type="Texture2D" uid="uid://btnsmj8m8hv5r" path="res://assets/textures/psx_128x128/Tile/Tile_08-128x128.png" id="7_1k4jf"]
+[ext_resource type="Texture2D" uid="uid://ccyetylihm0s6" path="res://assets/textures/psx_128x128/Stone/Stone_08-128x128.png" id="7_8q1ty"]
 [ext_resource type="PackedScene" uid="uid://oicjp4vhv4p3" path="res://src/level/components/dresser.tscn" id="8_2ns7m"]
 [ext_resource type="PackedScene" uid="uid://bgypb1i7sxl76" path="res://src/level/components/pentagram.tscn" id="8_fwap5"]
-[ext_resource type="Texture2D" uid="uid://d3n33gkq4g662" path="res://assets/output-onlinepngtools (1).png" id="9_4yj2q"]
+[ext_resource type="Texture2D" uid="uid://d3n33gkq4g662" path="res://assets/textures/output-onlinepngtools (1).png" id="9_4yj2q"]
 [ext_resource type="PackedScene" uid="uid://dlt5gxpog0udq" path="res://src/level/components/door.tscn" id="10_1un7q"]
-[ext_resource type="Texture2D" uid="uid://0yyu6ems1l86" path="res://assets/128x128/Wood/Wood_12-128x128.png" id="10_llg1j"]
+[ext_resource type="Texture2D" uid="uid://0yyu6ems1l86" path="res://assets/textures/psx_128x128/Wood/Wood_12-128x128.png" id="10_llg1j"]
 [ext_resource type="PackedScene" uid="uid://bbhs1ybxfpnn" path="res://src/level/components/lamp.tscn" id="10_we5tl"]
 [ext_resource type="Script" path="res://src/helpers/alpha_over_distance.gd" id="11_4se5d"]
-[ext_resource type="PackedScene" uid="uid://hjqgq2a5ou1l" path="res://assets/PSX_Furniture, Appliances, And Others/Single Bed/Single Bed.fbx_Scene/Single Bed.fbx_Scene.fbx" id="11_ax4mu"]
-[ext_resource type="PackedScene" uid="uid://q8y8q35x42g7" path="res://assets/PSX_Furniture, Appliances, And Others/Couch_2/Couch_2.fbx_Scene.fbx" id="12_4v4s2"]
-[ext_resource type="PackedScene" uid="uid://cf7hnft6lta20" path="res://assets/PSX_Furniture, Appliances, And Others/Cardboard/Box.fbx_Scene/Box.fbx_Scene.fbx" id="13_50cus"]
-[ext_resource type="PackedScene" uid="uid://dsmrjcmhx0sst" path="res://assets/PSX_Furniture, Appliances, And Others/TVStand/TVStand.fbx_Scene.fbx" id="14_dd4gi"]
-[ext_resource type="Texture2D" uid="uid://v08xtg4me00q" path="res://assets/nun.png" id="14_k6ldg"]
-[ext_resource type="PackedScene" uid="uid://xgxmtdex3fxp" path="res://assets/PSX_Furniture, Appliances, And Others/TV_1/TV.fbx_Scene.fbx" id="15_5jpwt"]
-[ext_resource type="PackedScene" uid="uid://d0qao6luv0du3" path="res://assets/PSX_Furniture, Appliances, And Others/Bathtub/Bathtub.fbx_Scene/Bathtub.fbx_Scene.fbx" id="17_p6yr1"]
+[ext_resource type="PackedScene" uid="uid://hjqgq2a5ou1l" path="res://assets/models/PSX_Furniture, Appliances, And Others/Single Bed/Single Bed.fbx_Scene/Single Bed.fbx_Scene.fbx" id="11_ax4mu"]
+[ext_resource type="PackedScene" uid="uid://q8y8q35x42g7" path="res://assets/models/PSX_Furniture, Appliances, And Others/Couch_2/Couch_2.fbx_Scene.fbx" id="12_4v4s2"]
+[ext_resource type="PackedScene" uid="uid://cf7hnft6lta20" path="res://assets/models/PSX_Furniture, Appliances, And Others/Cardboard/Box.fbx_Scene/Box.fbx_Scene.fbx" id="13_50cus"]
+[ext_resource type="PackedScene" uid="uid://dsmrjcmhx0sst" path="res://assets/models/PSX_Furniture, Appliances, And Others/TVStand/TVStand.fbx_Scene.fbx" id="14_dd4gi"]
+[ext_resource type="Texture2D" uid="uid://v08xtg4me00q" path="res://assets/textures/nun.png" id="14_k6ldg"]
+[ext_resource type="PackedScene" uid="uid://xgxmtdex3fxp" path="res://assets/models/PSX_Furniture, Appliances, And Others/TV_1/TV.fbx_Scene.fbx" id="15_5jpwt"]
+[ext_resource type="PackedScene" uid="uid://d0qao6luv0du3" path="res://assets/models/PSX_Furniture, Appliances, And Others/Bathtub/Bathtub.fbx_Scene/Bathtub.fbx_Scene.fbx" id="17_p6yr1"]
 [ext_resource type="Script" path="res://src/anomalies/visibility_anomaly.gd" id="18_1mdig"]
-[ext_resource type="PackedScene" uid="uid://chlrdf3e6cl6f" path="res://assets/PSX_Furniture, Appliances, And Others/Toilet/Toilet.fbx_Scene.fbx" id="18_rl5tf"]
-[ext_resource type="PackedScene" uid="uid://bciux5yt2fijf" path="res://assets/PSX_Furniture, Appliances, And Others/Bathroom Sink/BathroomSink.fbx_Scene/BathroomSink.fbx_Scene.fbx" id="19_75a2n"]
-[ext_resource type="Texture2D" uid="uid://mv7cwjkbjl7f" path="res://assets/128x128/Elements/Elements_13-128x128.png" id="19_kifrq"]
-[ext_resource type="Texture2D" uid="uid://cqpqx5vvq41gf" path="res://assets/png/Door_Apartment_01_red.png" id="20_yvxar"]
-[ext_resource type="PackedScene" uid="uid://doj2citacbwov" path="res://assets/PSX_Furniture, Appliances, And Others/Phone.fbx_Scene/Phone.fbx_Scene.fbx" id="23_jnrvp"]
-[ext_resource type="PackedScene" uid="uid://ceaqxpg1if5wx" path="res://assets/PSX_Furniture, Appliances, And Others/Fridge/Fridge.fbx_Scene/Fridge.fbx_Scene.fbx" id="24_gos03"]
+[ext_resource type="PackedScene" uid="uid://chlrdf3e6cl6f" path="res://assets/models/PSX_Furniture, Appliances, And Others/Toilet/Toilet.fbx_Scene.fbx" id="18_rl5tf"]
+[ext_resource type="PackedScene" uid="uid://bciux5yt2fijf" path="res://assets/models/PSX_Furniture, Appliances, And Others/Bathroom Sink/BathroomSink.fbx_Scene/BathroomSink.fbx_Scene.fbx" id="19_75a2n"]
+[ext_resource type="Texture2D" uid="uid://mv7cwjkbjl7f" path="res://assets/textures/psx_128x128/Elements/Elements_13-128x128.png" id="19_kifrq"]
+[ext_resource type="Texture2D" uid="uid://cqpqx5vvq41gf" path="res://assets/textures/doors/Door_Apartment_01_red.png" id="20_yvxar"]
+[ext_resource type="PackedScene" uid="uid://doj2citacbwov" path="res://assets/models/PSX_Furniture, Appliances, And Others/Phone.fbx_Scene/Phone.fbx_Scene.fbx" id="23_jnrvp"]
+[ext_resource type="PackedScene" uid="uid://ceaqxpg1if5wx" path="res://assets/models/PSX_Furniture, Appliances, And Others/Fridge/Fridge.fbx_Scene/Fridge.fbx_Scene.fbx" id="24_gos03"]
 [ext_resource type="PackedScene" uid="uid://bxn3bydk5mjeq" path="res://src/level/components/cupboard.tscn" id="25_2bdtc"]
-[ext_resource type="PackedScene" uid="uid://rphhcj4s4gou" path="res://assets/PSX_Furniture, Appliances, And Others/Kitchen_Sink/Kitchen_Sink.fbx_Scene/Kitchen_Sink.fbx_Scene.fbx" id="26_58p8y"]
-[ext_resource type="PackedScene" uid="uid://cjwc7buyu8bd7" path="res://assets/PSX_Furniture, Appliances, And Others/Stove/Stove.fbx_Scene/Stove.fbx_Scene.fbx" id="27_4upuh"]
+[ext_resource type="PackedScene" uid="uid://rphhcj4s4gou" path="res://assets/models/PSX_Furniture, Appliances, And Others/Kitchen_Sink/Kitchen_Sink.fbx_Scene/Kitchen_Sink.fbx_Scene.fbx" id="26_58p8y"]
+[ext_resource type="PackedScene" uid="uid://cjwc7buyu8bd7" path="res://assets/models/PSX_Furniture, Appliances, And Others/Stove/Stove.fbx_Scene/Stove.fbx_Scene.fbx" id="27_4upuh"]
 [ext_resource type="PackedScene" uid="uid://bx7aakrw7w4w8" path="res://src/level/components/skull.tscn" id="30_6p8l1"]
 [ext_resource type="PackedScene" uid="uid://f0gglomtu0qp" path="res://src/level/components/alarm_clock.tscn" id="31_aplwb"]
 [ext_resource type="PackedScene" uid="uid://bli5vcre0on7" path="res://src/level/components/silhouette_run.tscn" id="33_8d35i"]
-[ext_resource type="PackedScene" uid="uid://gps1a2myjvj5" path="res://assets/godot_plush/godot_plush V2.glb" id="35_6ga4m"]
+[ext_resource type="PackedScene" uid="uid://gps1a2myjvj5" path="res://assets/models/godot_plush/godot_plush V2.glb" id="35_6ga4m"]
 [ext_resource type="PackedScene" uid="uid://benlob8tsn8r4" path="res://src/level/components/tucker.tscn" id="37_pe075"]
-[ext_resource type="AudioStream" uid="uid://c63gce6fesk2g" path="res://assets/ambient-noise-236388.mp3" id="38_aebpg"]
-[ext_resource type="Texture2D" uid="uid://c5r2bqltnba4j" path="res://assets/PSX Pack 3/Textures/Wood_08.jpg" id="39_chl70"]
-[ext_resource type="Texture2D" uid="uid://d3p0fa5b0glxx" path="res://assets/PSX Pack 3/Textures/Electronics.jpg" id="40_8r53c"]
+[ext_resource type="AudioStream" uid="uid://c63gce6fesk2g" path="res://assets/sounds/ambient-noise-236388.mp3" id="38_aebpg"]
+[ext_resource type="Texture2D" uid="uid://c5r2bqltnba4j" path="res://assets/models/PSX Pack 3/Textures/Wood_08.jpg" id="39_chl70"]
+[ext_resource type="Texture2D" uid="uid://d3p0fa5b0glxx" path="res://assets/models/PSX Pack 3/Textures/Electronics.jpg" id="40_8r53c"]
 [ext_resource type="PackedScene" uid="uid://d4kskm178sc4w" path="res://src/level/components/pictures.tscn" id="41_of2yo"]
-[ext_resource type="Texture2D" uid="uid://ddj6hysjfd3h6" path="res://assets/PSX Pack 3/Textures/Entertainment.png" id="42_2iccq"]
+[ext_resource type="Texture2D" uid="uid://ddj6hysjfd3h6" path="res://assets/models/PSX Pack 3/Textures/Entertainment.png" id="42_2iccq"]
 [ext_resource type="PackedScene" uid="uid://drmnm827oxs5c" path="res://src/level/components/mircowave.tscn" id="43_m72cl"]
-[ext_resource type="Texture2D" uid="uid://bis6u884r0jat" path="res://assets/halloween/Textures/Body_01.png" id="44_nehk3"]
-[ext_resource type="Texture2D" uid="uid://bjqyycyl4apl2" path="res://assets/halloween/Textures/Body_parts.png" id="45_gjfs6"]
-[ext_resource type="Texture2D" uid="uid://caxjmpahkvtdi" path="res://assets/halloween/Textures/Coffin.png" id="46_faf0n"]
+[ext_resource type="Texture2D" uid="uid://bis6u884r0jat" path="res://assets/models/halloween/Textures/Body_01.png" id="44_nehk3"]
+[ext_resource type="Texture2D" uid="uid://6sk6yhtxxubh" path="res://assets/models/halloween/Textures/Body_parts.png" id="45_gjfs6"]
+[ext_resource type="Texture2D" uid="uid://caxjmpahkvtdi" path="res://assets/models/halloween/Textures/Coffin.png" id="46_faf0n"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ev13u"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -696,7 +696,7 @@ shape = SubResource("BoxShape3D_1kejy")
 transform = Transform3D(-1.6514, 0, -8.32148e-08, 0, 0.951866, 0, 1.4437e-07, 0, -0.951866, -0.413096, 0.306415, -5.90203)
 
 [node name="Couch_fbx" parent="Couch3" instance=ExtResource("3_eds81")]
-transform = Transform3D(1, 0, 3.55271e-15, 0, 1, 0, 0, 0, 1, 1.49012e-07, -2.98023e-08, -0.585403)
+transform = Transform3D(1, 0, 7.10543e-15, 0, 1, 0, 1.42109e-14, 0, 1, 0.026083, -2.98023e-08, -0.585403)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Couch3"]
 transform = Transform3D(1, 0, 0, 0, 0.999982, 0, 0, 0, 0.999982, 0, 0, 0)
@@ -733,15 +733,16 @@ size = Vector3(4.54217, 0.11, 2.17559)
 
 [node name="Roof" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.27931, 2.79775, -1.42736)
+visible = false
 material_override = SubResource("StandardMaterial3D_qesjb")
 use_collision = true
 size = Vector3(16.4989, 0.1, 15.8335)
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.68918, 1.34829, -4.6591)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.68918, 1.34829, -4.66209)
 material_override = SubResource("StandardMaterial3D_qesjb")
 use_collision = true
-size = Vector3(6.52166, 2.92195, 0.0681211)
+size = Vector3(6.52166, 2.92195, 0.0740996)
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="CSGBox3D2"]
 transform = Transform3D(-4.37643e-08, 0, -1.00121, 0, 1.21003, 0, 1.00121, 0, -4.37643e-08, 2.25371, -0.341297, -0.0177956)
@@ -767,16 +768,16 @@ radius = 0.036886
 script = ExtResource("18_1mdig")
 
 [node name="CSGBox3D8" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.118799, 1.34829, -9.05944)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.172787, 1.34829, -9.23388)
 material_override = SubResource("StandardMaterial3D_qesjb")
 use_collision = true
-size = Vector3(14.2089, 2.92195, 0.0503047)
+size = Vector3(14.7921, 2.92195, 0.399176)
 
 [node name="CSGBox3D4" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.70431, 1.34829, 1.05198)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.70431, 1.34829, 0.926373)
 material_override = SubResource("StandardMaterial3D_qesjb")
 use_collision = true
-size = Vector3(4.55194, 2.92195, 0.0503047)
+size = Vector3(4.55194, 2.92195, 0.30152)
 
 [node name="Table2" type="StaticBody3D" parent="."]
 transform = Transform3D(0.519218, 0, 0, 0, 0.713371, 0, 0, 0, 2.82244, -2.90657, -0.00288022, 0.586043)
@@ -797,10 +798,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.345825, 0)
 shape = SubResource("BoxShape3D_g0afe")
 
 [node name="CSGBox3D14" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.16244, 1.34829, 2.16478)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.16244, 1.34829, 2.02257)
 material_override = SubResource("StandardMaterial3D_qesjb")
 use_collision = true
-size = Vector3(9.10253, 2.92195, 0.0503047)
+size = Vector3(9.10253, 2.92195, 0.334723)
 
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="CSGBox3D14"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.04889, -0.285597, 0)
@@ -816,16 +817,16 @@ radius = 0.754419
 sides = 20
 
 [node name="CSGBox3D11" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.876628, 1.34829, 6.30847)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.876628, 1.34829, 6.42504)
 material_override = SubResource("StandardMaterial3D_qesjb")
 use_collision = true
-size = Vector3(15.7007, 2.92195, 0.0503047)
+size = Vector3(15.7007, 2.92195, 0.283453)
 
 [node name="CSGBox3D9" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.71042, 1.34829, 3.2556)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.71042, 1.34829, 3.34971)
 material_override = SubResource("StandardMaterial3D_qesjb")
 use_collision = true
-size = Vector3(4.56415, 2.92195, 0.0503047)
+size = Vector3(4.56415, 2.92195, 0.238531)
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="CSGBox3D9"]
 transform = Transform3D(-4.37643e-08, 0, -1.00121, 0, 1.21003, 0, 1.00121, 0, -4.37643e-08, 1.37705, -0.341297, -0.0177956)
@@ -841,7 +842,7 @@ script = ExtResource("18_1mdig")
 targets = [NodePath("..")]
 
 [node name="Decal2" type="Decal" parent="."]
-transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 0.242177, 1.00232, 2.61658)
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, -0.0659223, 1.00232, 2.61658)
 size = Vector3(1.1416, 0.248474, 2)
 texture_albedo = ExtResource("14_k6ldg")
 upper_fade = 1e-05
@@ -865,22 +866,22 @@ rings = 3
 script = ExtResource("18_1mdig")
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.381239, 1.34829, -2.942)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.229997, 1.34829, -2.8397)
 material_override = SubResource("StandardMaterial3D_qesjb")
 use_collision = true
-size = Vector3(0.0962031, 2.92195, 12.4206)
+size = Vector3(0.398687, 2.92195, 12.6252)
 
 [node name="CSGBox3D13" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.64481, 1.34829, 4.0352)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.81448, 1.34829, 4.0352)
 material_override = SubResource("StandardMaterial3D_qesjb")
 use_collision = true
-size = Vector3(0.001, 2.92195, 5.4406)
+size = Vector3(0.340344, 2.92195, 5.4406)
 
 [node name="CSGBox3D15" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.54371, 1.34829, -3.49337)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.69336, 1.34829, -3.49337)
 material_override = SubResource("StandardMaterial3D_qesjb")
 use_collision = true
-size = Vector3(0.001, 2.92195, 11.318)
+size = Vector3(0.300305, 2.92195, 11.318)
 
 [node name="Node3D2" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.67845, 0.877485, 4.17631)
@@ -935,10 +936,10 @@ transform = Transform3D(1, 0, -1.74846e-07, 0, 1, 0, 1.74846e-07, 0, 1, 5.89247,
 transform = Transform3D(-1, 0, -1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 4.14793, -0.0219653, 3.26468)
 
 [node name="CSGBox3D6" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.96472, 1.34829, -0.68189)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.99768, 1.34829, -0.586534)
 material_override = SubResource("StandardMaterial3D_qesjb")
 use_collision = true
-size = Vector3(0.0625059, 2.92195, 7.91838)
+size = Vector3(0.128421, 2.92195, 8.10909)
 
 [node name="CSGBox3D" type="CSGBox3D" parent="CSGBox3D6"]
 transform = Transform3D(1.00121, 0, 0, 0, 1.21003, 0, 0, 0, 1.00121, 0, -0.341297, 0.751612)
@@ -946,10 +947,10 @@ operation = 2
 size = Vector3(0.353516, 2.0415, 1.13873)
 
 [node name="CSGBox3D7" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.93361, 1.34829, -1.36912)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.19404, 1.34829, -1.36912)
 material_override = SubResource("StandardMaterial3D_qesjb")
 use_collision = true
-size = Vector3(0.001, 2.92195, 15.452)
+size = Vector3(0.521862, 2.92195, 15.452)
 
 [node name="Node3D" type="Node3D" parent="." node_paths=PackedStringArray("targets")]
 script = ExtResource("5_5tn3s")
@@ -961,7 +962,7 @@ targets = [NodePath("../NightStand/Small_Tablefbx_fbx_Scene"), NodePath("../Couc
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.27309, 4.28409e-07, -8.49261)
 
 [node name="BedSingle" type="StaticBody3D" parent="."]
-transform = Transform3D(-5.26497e-08, 0, 1.20448, 0, 1.20448, 0, -1.20448, 0, -5.26497e-08, 1.81337, -0.026588, -5.44719)
+transform = Transform3D(-5.26497e-08, 0, 1.20448, 0, 1.20448, 0, -1.20448, 0, -5.26497e-08, 1.81337, -0.026588, -5.47219)
 
 [node name="Single Bed_fbx_Scene" parent="BedSingle" instance=ExtResource("11_ax4mu")]
 
@@ -1167,7 +1168,7 @@ skeleton = NodePath("")
 script = ExtResource("18_1mdig")
 
 [node name="Coffin_Top" type="MeshInstance3D" parent="."]
-transform = Transform3D(-100, -9.07641e-06, -2.83684e-05, -1.33898e-05, 93.9376, 68.5779, 1.02121e-05, 34.2889, -187.875, 4.94169, 1.04208, -5.0546)
+transform = Transform3D(-100, -9.07641e-06, -2.83684e-05, -1.33898e-05, 93.9376, 68.5779, 1.02121e-05, 34.2889, -187.875, 4.94169, 1.04208, -5.11668)
 mesh = SubResource("ArrayMesh_g5pe2")
 skeleton = NodePath("")
 

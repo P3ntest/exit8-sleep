@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://btayceg3eldcf"]
+
+[ext_resource type="PackedScene" uid="uid://crfpen7f1g032" path="res://assets/models/halloween/Models/halloween.fbx" id="1_y26ia"]
+
+[node name="halloween" instance=ExtResource("1_y26ia")]

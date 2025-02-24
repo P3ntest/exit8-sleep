@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=4 uid="uid://bgypb1i7sxl76"]
 
-[ext_resource type="Texture2D" uid="uid://ckxk5cwmqhecn" path="res://assets/pngimg.com_-_pentagram_PNG23_optimized.png" id="1_ivrrt"]
+[ext_resource type="Texture2D" uid="uid://ckxk5cwmqhecn" path="res://assets/textures/pngimg.com_-_pentagram_PNG23_optimized.png" id="1_ivrrt"]
 [ext_resource type="Script" path="res://src/anomalies/visibility_anomaly.gd" id="2_mgf3v"]
-[ext_resource type="Texture2D" uid="uid://c512kjrjnrw7w" path="res://assets/halloween/textures/Candles.png" id="3_g3mnr"]
-[ext_resource type="Texture2D" uid="uid://cn6kvsubdqnwg" path="res://assets/halloween/textures/Candles_Emissor.png" id="4_ttoyl"]
+[ext_resource type="Texture2D" uid="uid://c512kjrjnrw7w" path="res://assets/models/halloween/Textures/Candles.png" id="3_g3mnr"]
+[ext_resource type="Texture2D" uid="uid://cn6kvsubdqnwg" path="res://assets/models/halloween/Textures/Candles_Emissor.png" id="4_ttoyl"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_crbm5"]
 resource_name = "Candles"

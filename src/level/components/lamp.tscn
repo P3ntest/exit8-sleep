@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bbhs1ybxfpnn"]
 
-[ext_resource type="PackedScene" uid="uid://hv574m4niytq" path="res://assets/PSX_Furniture, Appliances, And Others/FloorLamp.fbx_Scene/FloorLamp.fbx_Scene.fbx" id="1_xffjv"]
+[ext_resource type="PackedScene" uid="uid://hv574m4niytq" path="res://assets/models/PSX_Furniture, Appliances, And Others/FloorLamp.fbx_Scene/FloorLamp.fbx_Scene.fbx" id="1_xffjv"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_1cd75"]
 height = 1.55804

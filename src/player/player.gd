@@ -1,6 +1,7 @@
 class_name Player
 extends CharacterBody3D
 
+@export var debug: bool = false
 
 const SPEED = 2.8
 const JUMP_VELOCITY = 4.5
@@ -21,6 +22,9 @@ var frozen = true
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	add_to_group("player")
+
+	if debug:
+		frozen = false
 
 func tp_to_spawn() -> void:
 	var spawn = get_tree().get_first_node_in_group("player_spawn")

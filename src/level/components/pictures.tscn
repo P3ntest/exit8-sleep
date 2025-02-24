@@ -1,9 +1,9 @@
 [gd_scene load_steps=16 format=4 uid="uid://d4kskm178sc4w"]
 
 [ext_resource type="Script" path="res://src/anomalies/position_switch.gd" id="1_etr2l"]
-[ext_resource type="Texture2D" uid="uid://dng44suvut22o" path="res://assets/PSX Pack 3/textures/Wood_02.jpg" id="2_sd3ff"]
-[ext_resource type="Texture2D" uid="uid://dc5y2ytv5c2ue" path="res://assets/PSX Pack 3/textures/Paintings.jpg" id="3_crohx"]
-[ext_resource type="Texture2D" uid="uid://v08xtg4me00q" path="res://assets/nun.png" id="4_kqxad"]
+[ext_resource type="Texture2D" uid="uid://dng44suvut22o" path="res://assets/models/PSX Pack 3/Textures/Wood_02.jpg" id="2_sd3ff"]
+[ext_resource type="Texture2D" uid="uid://dc5y2ytv5c2ue" path="res://assets/models/PSX Pack 3/Textures/Paintings.jpg" id="3_crohx"]
+[ext_resource type="Texture2D" uid="uid://v08xtg4me00q" path="res://assets/textures/nun.png" id="4_kqxad"]
 [ext_resource type="Script" path="res://src/anomalies/visibility_anomaly.gd" id="5_wifjp"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v4n71"]

@@ -1,9 +1,9 @@
 [gd_scene load_steps=10 format=3 uid="uid://dlt5gxpog0udq"]
 
-[ext_resource type="PackedScene" uid="uid://cjgmlkypd513f" path="res://assets/low-poly-psx-hinged-door/source/Doors.fbx" id="1_amuyy"]
+[ext_resource type="PackedScene" uid="uid://cjgmlkypd513f" path="res://assets/models/low-poly-psx-hinged-door/source/Doors.fbx" id="1_amuyy"]
 [ext_resource type="Script" path="res://src/level/components/door.gd" id="1_li3wk"]
 [ext_resource type="Script" path="res://src/components/interactable.gd" id="2_6v4vx"]
-[ext_resource type="AudioStream" uid="uid://d1fn8kd0h43s7" path="res://assets/door-creaking-sound-effect-241381.mp3" id="4_mspd2"]
+[ext_resource type="AudioStream" uid="uid://d1fn8kd0h43s7" path="res://assets/sounds/door-creaking-sound-effect-241381.mp3" id="4_mspd2"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_j32l1"]
 size = Vector3(0.989258, 2.04373, 0.0761108)

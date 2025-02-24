@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://ddpyecacsuct"]
 
 [ext_resource type="Script" path="res://src/ui/main_menu.gd" id="1_f8jsl"]
-[ext_resource type="Texture2D" uid="uid://cjgipo62c3e46" path="res://assets/Screenshot 2024-12-04 at 15.49.58.png" id="1_ylotc"]
+[ext_resource type="Texture2D" uid="uid://cjgipo62c3e46" path="res://assets/textures/Screenshot 2024-12-04 at 15.49.58.png" id="1_ylotc"]
 [ext_resource type="PackedScene" uid="uid://cqqa650qep23i" path="res://src/main.tscn" id="2_h07md"]
-[ext_resource type="FontFile" uid="uid://doksxqpqikhjo" path="res://assets/Seven Segment.ttf" id="2_qtx32"]
+[ext_resource type="FontFile" uid="uid://doksxqpqikhjo" path="res://assets/fonts/Seven Segment.ttf" id="2_qtx32"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_mrkbj"]
 font = ExtResource("2_qtx32")

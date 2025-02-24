@@ -10,6 +10,8 @@ extends Node3D
 
 @onready var animation_player = $AnimationPlayer
 
+@export var nightmares: Array[PackedScene]
+
 const days: Dictionary = {
 	0: "Sunday",
 	1: "Monday",
@@ -71,18 +73,24 @@ func on_sleep():
 		on_lost()
 		restart()
 
+func on_complete_nightmare():
+	next_day()
+
+func next_day():
+	current_day += 1
+	if current_day == len(days):
+		weekday_label.text = "You won!"
+		day_text_label.text = "It took you " + str(int(timer)) + " seconds to survive the week."
+		await get_tree().create_timer(5.0).timeout
+		get_tree().change_scene_to_packed(main_menu)
+		pass
+	restart()
+
 func on_exit():
 	if current_day == 0:
 		return
 	elif not round_has_anomaly:
-		current_day += 1
-		if current_day == len(days):
-			weekday_label.text = "You won!"
-			day_text_label.text = "It took you " + str(int(timer)) + " seconds to survive the week."
-			await get_tree().create_timer(5.0).timeout
-			get_tree().change_scene_to_packed(main_menu)
-			pass
-		restart()
+		next_day()
 	else:
 		print("lost due to anomaly not found")
 		for anomaly in enabled_anomalies:
@@ -124,10 +132,16 @@ func start_round() -> void:
 		grace_round = false
 		round_has_anomaly = false
 
+	var is_nightmare = round_has_anomaly and randf() < 0.1 and nightmares.size() > 0
+
+	var nightmare = nightmares.pick_random() if is_nightmare else null
+	if nightmare:
+		nightmares.erase(nightmare)
+
 	# Spawning the level
 	if current_level:
 		current_level.free()
-	var level_instance = level.instantiate()
+	var level_instance = (level if not is_nightmare else nightmare).instantiate()
 	add_child(level_instance)
 	current_level = level_instance
 
@@ -135,7 +149,7 @@ func start_round() -> void:
 	player.tp_to_spawn()
 
 	# Spawning anomaly
-	if round_has_anomaly:
+	if round_has_anomaly and not is_nightmare:
 		enable_random_anomaly()
 
 	animation_player.play("lighten")

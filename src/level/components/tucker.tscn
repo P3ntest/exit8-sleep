@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://benlob8tsn8r4"]
 
-[ext_resource type="Texture2D" uid="uid://ixxhg6fnkpch" path="res://assets/image-removebg-preview_9_1_optimized (1).png" id="1_5n6oh"]
+[ext_resource type="Texture2D" uid="uid://ixxhg6fnkpch" path="res://assets/textures/image-removebg-preview_9_1_optimized (1).png" id="1_5n6oh"]
 [ext_resource type="Script" path="res://src/helpers/animation_trigger_zone.gd" id="2_5x0f5"]
 [ext_resource type="Script" path="res://src/anomalies/visibility_anomaly.gd" id="3_265ot"]
 

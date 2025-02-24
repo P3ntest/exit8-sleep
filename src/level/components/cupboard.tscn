@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bxn3bydk5mjeq"]
 
-[ext_resource type="PackedScene" uid="uid://b4bkr31a1bo4w" path="res://assets/PSX_Furniture, Appliances, And Others/Cupboard/Cupboard.fbx_Scene/Cupboard.fbx_Scene.fbx" id="1_vucdl"]
+[ext_resource type="PackedScene" uid="uid://b4bkr31a1bo4w" path="res://assets/models/PSX_Furniture, Appliances, And Others/Cupboard/Cupboard.fbx_Scene/Cupboard.fbx_Scene.fbx" id="1_vucdl"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ydgcq"]
 size = Vector3(0.93811, 1.48328, 0.602051)

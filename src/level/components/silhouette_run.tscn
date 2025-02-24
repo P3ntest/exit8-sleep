@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://bli5vcre0on7"]
 
-[ext_resource type="Texture2D" uid="uid://ixxhg6fnkpch" path="res://assets/image-removebg-preview_9_1_optimized (1).png" id="1_lra0j"]
-[ext_resource type="AudioStream" uid="uid://bh642ek0hn5eu" path="res://assets/jumpscare-94984.mp3" id="2_2fb0b"]
+[ext_resource type="Texture2D" uid="uid://ixxhg6fnkpch" path="res://assets/textures/image-removebg-preview_9_1_optimized (1).png" id="1_lra0j"]
+[ext_resource type="AudioStream" uid="uid://bh642ek0hn5eu" path="res://assets/sounds/jumpscare-94984.mp3" id="2_2fb0b"]
 [ext_resource type="Script" path="res://src/helpers/animation_trigger_zone.gd" id="3_kup5w"]
 [ext_resource type="Script" path="res://src/anomalies/visibility_anomaly.gd" id="4_jnf2n"]
 

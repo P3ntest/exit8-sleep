@@ -1,12 +1,12 @@
 [gd_scene load_steps=20 format=4 uid="uid://oicjp4vhv4p3"]
 
-[ext_resource type="PackedScene" uid="uid://84kepgxeokox" path="res://assets/PSX_Furniture, Appliances, And Others/Dresser/Dresser.fbx_Scene/Dresser.fbx_Scene.fbx" id="1_2bta1"]
+[ext_resource type="PackedScene" uid="uid://84kepgxeokox" path="res://assets/models/PSX_Furniture, Appliances, And Others/Dresser/Dresser.fbx_Scene/Dresser.fbx_Scene.fbx" id="1_2bta1"]
 [ext_resource type="Script" path="res://src/anomalies/position_switch.gd" id="1_ug7be"]
-[ext_resource type="Texture2D" uid="uid://cojx7lclbmlxw" path="res://assets/PSX Pack 3/Textures/Plaster_02.jpg" id="3_7folk"]
-[ext_resource type="Texture2D" uid="uid://dwkg0cqw5wlu3" path="res://assets/PSX Pack 3/Textures/Plants.png" id="4_v00ik"]
-[ext_resource type="Texture2D" uid="uid://d3p0fa5b0glxx" path="res://assets/PSX Pack 3/Textures/Electronics.jpg" id="5_7psvu"]
-[ext_resource type="Texture2D" uid="uid://50swwhsbh4a6" path="res://assets/PSX Pack 3/Textures/Metal_05.jpg" id="6_73sek"]
-[ext_resource type="Texture2D" uid="uid://bnfui6niddlts" path="res://assets/PSX Pack 3/Textures/Plastic_02.jpg" id="7_g2emv"]
+[ext_resource type="Texture2D" uid="uid://cojx7lclbmlxw" path="res://assets/models/PSX Pack 3/Textures/Plaster_02.jpg" id="3_7folk"]
+[ext_resource type="Texture2D" uid="uid://dwkg0cqw5wlu3" path="res://assets/models/PSX Pack 3/Textures/Plants.png" id="4_v00ik"]
+[ext_resource type="Texture2D" uid="uid://d3p0fa5b0glxx" path="res://assets/models/PSX Pack 3/Textures/Electronics.jpg" id="5_7psvu"]
+[ext_resource type="Texture2D" uid="uid://50swwhsbh4a6" path="res://assets/models/PSX Pack 3/Textures/Metal_05.jpg" id="6_73sek"]
+[ext_resource type="Texture2D" uid="uid://bnfui6niddlts" path="res://assets/models/PSX Pack 3/Textures/Plastic_02.jpg" id="7_g2emv"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_eaqc2"]
 size = Vector3(1.39746, 0.878906, 0.5)
