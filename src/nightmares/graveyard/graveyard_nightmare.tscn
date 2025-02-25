@@ -41,14 +41,12 @@ volumetric_fog_sky_affect = 0.811
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8m4ee"]
 resource_name = "Concrete"
 vertex_color_use_as_albedo = true
-albedo_color = Color(1, 1, 1, 1)
 albedo_texture = ExtResource("3_4c3kb")
 emission_enabled = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sdrxk"]
 resource_name = "Metal"
 vertex_color_use_as_albedo = true
-albedo_color = Color(1, 1, 1, 1)
 albedo_texture = ExtResource("4_wr5rw")
 emission_enabled = true
 
@@ -119,7 +117,6 @@ points = PackedVector3Array(0.0184948, 0.000289183, 0.0174554, -0.010214, -0.001
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0cfow"]
 resource_name = "Concrete"
 vertex_color_use_as_albedo = true
-albedo_color = Color(1, 1, 1, 1)
 albedo_texture = ExtResource("3_4c3kb")
 emission_enabled = true
 
@@ -163,7 +160,6 @@ points = PackedVector3Array(0.00180133, 0.00180133, 0.0245653, -0.00180133, 0.00
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_56i7l"]
 resource_name = "Farmland"
 vertex_color_use_as_albedo = true
-albedo_color = Color(1, 1, 1, 1)
 albedo_texture = ExtResource("2_jan36")
 emission_enabled = true
 
@@ -204,7 +200,6 @@ shadow_mesh = SubResource("ArrayMesh_cpu1c")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_27mbo"]
 resource_name = "Shovel"
 vertex_color_use_as_albedo = true
-albedo_color = Color(1, 1, 1, 1)
 albedo_texture = ExtResource("6_4quxf")
 emission_enabled = true
 
@@ -245,7 +240,6 @@ shadow_mesh = SubResource("ArrayMesh_0kjt6")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3d10g"]
 resource_name = "Stone_08"
 vertex_color_use_as_albedo = true
-albedo_color = Color(1, 1, 1, 1)
 albedo_texture = ExtResource("8_g355m")
 emission_enabled = true
 
@@ -612,14 +606,12 @@ agent_max_climb = 0.0
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eoe83"]
 resource_name = "Concrete"
 vertex_color_use_as_albedo = true
-albedo_color = Color(1, 1, 1, 1)
 albedo_texture = ExtResource("3_4c3kb")
 emission_enabled = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lbow7"]
 resource_name = "BrickSmallBrown"
 vertex_color_use_as_albedo = true
-albedo_color = Color(1, 1, 1, 1)
 albedo_texture = ExtResource("16_n052j")
 emission_enabled = true
 
@@ -856,7 +848,6 @@ data = PackedVector3Array(0.0164117, -0.00159108, -0.00915046, 0.0164117, 0.0015
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aoebf"]
 resource_name = "Metal"
 vertex_color_use_as_albedo = true
-albedo_color = Color(1, 1, 1, 1)
 albedo_texture = ExtResource("4_wr5rw")
 emission_enabled = true
 
@@ -3724,7 +3715,7 @@ skeleton = NodePath("")
 shape = SubResource("ConcavePolygonShape3D_to3ne")
 
 [node name="Wall85" type="MeshInstance3D" parent="NavigationRegion3D/Walls"]
-transform = Transform3D(-2.18557e-05, -100, -1.19209e-05, 0, -1.19209e-05, 100, -100, 2.18557e-05, 2.6054e-12, -8.10873, 1.25583, 39.3149)
+transform = Transform3D(-2.18557e-05, -100, -1.19209e-05, 0, -1.19209e-05, 100, -100, 2.18557e-05, 2.6054e-12, -8.10873, 1.25583, 39.282)
 mesh = SubResource("ArrayMesh_r46bm")
 skeleton = NodePath("")
 

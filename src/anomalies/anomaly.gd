@@ -3,8 +3,13 @@ class_name Anomaly extends Node3D
 @export var anomaly_name: String
 @export var enabled = false
 
+@export var debug_enabled = false
+
 func _ready():
     add_to_group("anomalies")
+
+    if debug_enabled:
+        enable()
 
 func enable():
     enabled = true

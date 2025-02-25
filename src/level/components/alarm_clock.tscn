@@ -33,3 +33,4 @@ anomaly_name = "Super Fast Alarm Clock"
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("4_ovgui")
+volume_db = -40.0
