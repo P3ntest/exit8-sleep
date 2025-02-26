@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bmo8clog5o30h" path="res://src/player/player.tscn" id="1_3orup"]
 [ext_resource type="Shader" path="res://src/level/main.gdshader" id="1_cht7b"]
 [ext_resource type="Script" path="res://src/game_manager.gd" id="2_j4dyo"]
-[ext_resource type="PackedScene" uid="uid://br2u1b3e7vct0" path="res://src/level/new_house/new_house.tscn" id="4_w2bj8"]
+[ext_resource type="PackedScene" uid="uid://cp63x858uotms" path="res://src/level/level_remake.tscn" id="4_2lwo7"]
 [ext_resource type="PackedScene" uid="uid://s3neqk4iw6ls" path="res://src/nightmares/graveyard/graveyard_nightmare.tscn" id="5_h0sgw"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_v8y2f"]
@@ -132,7 +132,7 @@ game_manager = NodePath("../GameManager")
 
 [node name="GameManager" type="Node3D" parent="SubViewport/Node3D" node_paths=PackedStringArray("player", "weekday_label", "day_text_label")]
 script = ExtResource("2_j4dyo")
-level = ExtResource("4_w2bj8")
+level = ExtResource("4_2lwo7")
 player = NodePath("../Player")
 weekday_label = NodePath("Control/VBoxContainer/Weekday")
 day_text_label = NodePath("Control/VBoxContainer/DayText")

@@ -132,8 +132,9 @@ func start_round() -> void:
 		grace_round = false
 		round_has_anomaly = false
 
-	var is_nightmare = round_has_anomaly and randf() < 0.1 and nightmares.size() > 0
+	var nightmare_chance = randf() < 0.1
 
+	var is_nightmare = round_has_anomaly and nightmare_chance and nightmares.size() > 0
 	var nightmare = nightmares.pick_random() if is_nightmare else null
 	if nightmare:
 		nightmares.erase(nightmare)

@@ -42,8 +42,9 @@ func _on_interactable_on_interact() -> void:
 		activated_video = true
 
 		get_tree().create_timer(3.0).timeout.connect(func ():
-			shatter_sound.play()
-			shatter_light.light_energy = 0
+			return
+			# shatter_sound.play()
+			# shatter_light.light_energy = 0
 			)
 
 		video_player.play()
