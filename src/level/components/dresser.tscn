@@ -120,7 +120,7 @@ shadow_mesh = SubResource("ArrayMesh_fmq6y")
 [node name="Dresser2" type="StaticBody3D" node_paths=PackedStringArray("targets")]
 transform = Transform3D(-5.56307e-08, 0, 1.0213, 0, 1.0213, 0, -1.27268, 0, -4.46427e-08, -3.96843, -0.0279001, 4.81128)
 script = ExtResource("1_ug7be")
-targets = [NodePath("Node3D"), NodePath("Node3D2"), NodePath("")]
+targets = [NodePath("Node3D"), NodePath("Node3D2"), null]
 
 [node name="Dresser_fbx_Scene" parent="." instance=ExtResource("1_2bta1")]
 transform = Transform3D(1, 0, -3.55271e-15, 0, 1, 0, 3.55271e-15, 0, 1, 0, 0, 0)
