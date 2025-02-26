@@ -14,6 +14,7 @@ func _ready():
         target.visible = not normal_visible
     
 func enable():
+    enabled = true
     for target in targets:
         target.visible = not normal_visible
     for target in anti_targets:

@@ -42,7 +42,7 @@ func get_anomalies() -> Array[Anomaly]:
 		return get_anomalies()
 	return anomalies
 
-const DEV_ALL_ANOMALIES = false 
+const DEV_ALL_ANOMALIES = false
 var enabled_anomalies: Array[Anomaly] = []
 func enable_random_anomaly() -> void:
 	enabled_anomalies.clear()
@@ -64,6 +64,9 @@ func on_lost():
 	current_day = 1
 
 func on_sleep():
+	if not can_go_sleep():
+		return
+
 	if current_day == 0:
 		current_day = 1
 		restart()
@@ -113,6 +116,11 @@ func end_round() -> void:
 	await animation_player.animation_finished
 	return
 
+func can_go_sleep() -> bool:
+	for anomaly in enabled_anomalies:
+		if not anomaly.can_go_sleep:
+			return false
+	return true
 
 var grace_round = true
 var anomaly_rounds = 0

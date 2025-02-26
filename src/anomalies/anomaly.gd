@@ -5,6 +5,8 @@ class_name Anomaly extends Node3D
 
 @export var debug_enabled = false
 
+var can_go_sleep = true
+
 func _ready():
     add_to_group("anomalies")
 

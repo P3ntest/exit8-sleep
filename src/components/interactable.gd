@@ -12,6 +12,5 @@ enum GameEvent {
     EXIT
 }
 
-
 func interact():
     on_interact.emit()
