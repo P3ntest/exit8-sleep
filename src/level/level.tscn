@@ -1,4 +1,4 @@
-[gd_scene load_steps=132 format=4 uid="uid://cp63x858uotms"]
+[gd_scene load_steps=133 format=4 uid="uid://cp63x858uotms"]
 
 [ext_resource type="Texture2D" uid="uid://d3p0fa5b0glxx" path="res://assets/models/PSX Pack 3/Textures/Electronics.jpg" id="1_l24xd"]
 [ext_resource type="PackedScene" uid="uid://tw5t6nkijxuf" path="res://assets/models/PSX_Furniture, Appliances, And Others/Small_Tablefbx.fbx_Scene/Small_Tablefbx.fbx_Scene.fbx" id="2_850ve"]
@@ -57,6 +57,7 @@
 [ext_resource type="Texture2D" uid="uid://bnfui6niddlts" path="res://assets/models/PSX Pack 3/Textures/Plastic_02.jpg" id="55_eb62s"]
 [ext_resource type="Texture2D" uid="uid://cojx7lclbmlxw" path="res://assets/models/PSX Pack 3/Textures/Plaster_02.jpg" id="56_u85l7"]
 [ext_resource type="Texture2D" uid="uid://dwkg0cqw5wlu3" path="res://assets/models/PSX Pack 3/Textures/Plants.png" id="57_okar4"]
+[ext_resource type="Script" path="res://src/level/anomaly_helper.gd" id="58_y4yl1"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ev13u"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -1540,5 +1541,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.19404, 1.34829, -1.36912)
 material_override = SubResource("StandardMaterial3D_qesjb")
 use_collision = true
 size = Vector3(0.521862, 2.92195, 15.452)
+
+[node name="AnomalyHelper" type="Node" parent="."]
+script = ExtResource("58_y4yl1")
 
 [editable path="Furniture/Hallway/Tucker"]
