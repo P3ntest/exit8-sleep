@@ -11,8 +11,9 @@ const MOUSE_SENSITIVITY = 0.002
 var frozen = true
 
 @onready var head: Node3D = $Head
-@onready var camera: Camera3D = $Head/Camera3D
-@onready var interactable_cast: RayCast3D = $Head/Camera3D/RayCast3D
+@onready var camera: Camera3D = $Head/CameraMount/Camera3D
+@onready var camera_pivot: Node3D = $Head/CameraMount
+@onready var interactable_cast: RayCast3D = $Head/CameraMount/RayCast3D
 
 @export_group("Nodes")
 @export var interactable_popup: Control
@@ -31,13 +32,29 @@ func tp_to_spawn() -> void:
 	global_position = spawn.global_position
 	rotation.y = spawn.rotation.y
 
+var cam_target_origin: Transform3D
+var cam_target_transform: Transform3D:
+	set(value):
+		cam_target_transform = value
+		cam_target_origin = camera_pivot.global_transform
+var cam_transition_amount: float = 0.0
+
+func can_look_around():
+	return not frozen and cam_transition_amount == 0.0
+
+# func _process(delta):
+# 	cam_transition_amount = move_toward(cam_transition_amount, 1.0 if cam_target_transform else 0.0, 2 * delta)
+
+# 	if cam_transition_amount > 0.0:
+# 		camera_pivot.global_transform = cam_target_origin.interpolate_with(cam_target_transform, cam_transition_amount)
+
 func _unhandled_input(event: InputEvent) -> void:
-	if frozen:
+	if not can_look_around():
 		return
 	if event is InputEventMouseMotion: 
 		rotate_y(-event.relative.x * MOUSE_SENSITIVITY)
-		camera.rotate_x(-event.relative.y * MOUSE_SENSITIVITY)
-		camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-89), deg_to_rad(89))
+		camera_pivot.rotate_x(-event.relative.y * MOUSE_SENSITIVITY)
+		camera_pivot.rotation.x = clamp(camera_pivot.rotation.x, deg_to_rad(-89), deg_to_rad(89))
 
 var bob_intensity = 0.0
 var bob_position = 0.0
@@ -78,7 +95,7 @@ func _physics_process(delta: float) -> void:
 
 	bob_position  += get_real_velocity().length() * delta * 4
 	bob_intensity = lerp(bob_intensity, 1.0 if get_real_velocity().length() > 0.1 else 0.0, 3 * delta)
-	camera.position.y = sin(bob_position) * bob_intensity * 0.04
+	camera_pivot.position.y = sin(bob_position) * bob_intensity * 0.04
 	footstep_charge += get_real_velocity().length() * delta
 	if footstep_charge > 2:
 		footstep_charge = 0

@@ -8,8 +8,6 @@ extends Node3D
 
 @export var main_menu: PackedScene
 
-@onready var animation_player = $AnimationPlayer
-
 @export var nightmares: Array[PackedScene]
 
 const days: Dictionary = {
@@ -25,6 +23,9 @@ const days: Dictionary = {
 func _ready() -> void:
 	add_to_group("game_manager")
 	start_round()
+
+func get_calendar_day():
+	return current_day
 
 var timer: float = 0.0
 func _process(delta):
@@ -112,8 +113,8 @@ var round_has_anomaly = false
 
 func end_round() -> void:
 	player.frozen = true
-	animation_player.play("darken")
-	await animation_player.animation_finished
+	# animation_player.play("darken")
+	# await animation_player.animation_finished
 	return
 
 func can_go_sleep() -> bool:
@@ -126,8 +127,6 @@ var grace_round = true
 var anomaly_rounds = 0
 func start_round() -> void:
 	print('starting round')
-	weekday_label.text = days[current_day]
-	day_text_label.text = "I should go to sleep soon." if current_day == 0 else "Am I dreaming?"
 	print('remaining anomaly rounds:', anomaly_rounds)
 	round_has_anomaly = anomaly_rounds > 0
 	if round_has_anomaly:
@@ -161,6 +160,6 @@ func start_round() -> void:
 	if round_has_anomaly and not is_nightmare:
 		enable_random_anomaly()
 
-	animation_player.play("lighten")
-	await animation_player.animation_finished
+	# animation_player.play("lighten")
+	# await animation_player.animation_finished
 	player.frozen = false

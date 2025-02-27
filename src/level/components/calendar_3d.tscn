@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://ci73egdkx27j4"]
+
+[ext_resource type="PackedScene" uid="uid://diwxghejd86ak" path="res://src/level/components/calendar.tscn" id="1_o52mo"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_oevnd"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pumko"]
+resource_local_to_scene = true
+albedo_texture = SubResource("ViewportTexture_oevnd")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r23w6"]
+
+[node name="Calendar3D" type="Node3D"]
+
+[node name="SubViewport" type="SubViewport" parent="."]
+size = Vector2i(300, 250)
+size_2d_override = Vector2i(512, 422)
+size_2d_override_stretch = true
+
+[node name="CalendarPng" parent="SubViewport" instance=ExtResource("1_o52mo")]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0317922)
+material_override = SubResource("StandardMaterial3D_pumko")
+size = Vector3(2.985, 2.498, 0.0615845)
+material = SubResource("StandardMaterial3D_r23w6")
