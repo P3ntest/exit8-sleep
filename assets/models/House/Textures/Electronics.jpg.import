@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c02rw72xrips3"
-path.s3tc="res://.godot/imported/Electronics.jpg-90414ccbec27e4f7d1482355736a3e1a.s3tc.ctex"
+path.s3tc="res://.godot/imported/Electronics.jpg-b6d0febfe043c26d54f229852a0ef026.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/models/House/textures/Electronics.jpg"
-dest_files=["res://.godot/imported/Electronics.jpg-90414ccbec27e4f7d1482355736a3e1a.s3tc.ctex"]
+source_file="res://assets/models/House/Textures/Electronics.jpg"
+dest_files=["res://.godot/imported/Electronics.jpg-b6d0febfe043c26d54f229852a0ef026.s3tc.ctex"]
 
 [params]
 

@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bb50lsxeyny73"
+uid="uid://c8cix4ultyj16"
 path.s3tc="res://.godot/imported/bed_BedTex.png-6bf0549566bc78810a78549d322abde6.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "7ac1710288dd668f43ad90ca669dcbae"
 }
 
 [deps]

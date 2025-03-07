@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ta2amair8wpe"
-path.s3tc="res://.godot/imported/PlasterWhite.jpg-0f43ef82c6effeeffbeb070cb1d7f17d.s3tc.ctex"
+path.s3tc="res://.godot/imported/PlasterWhite.jpg-c43e0ecc8ebee5ddc4cc5c5fe0e4d51e.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/models/House/textures/PlasterWhite.jpg"
-dest_files=["res://.godot/imported/PlasterWhite.jpg-0f43ef82c6effeeffbeb070cb1d7f17d.s3tc.ctex"]
+source_file="res://assets/models/House/Textures/PlasterWhite.jpg"
+dest_files=["res://.godot/imported/PlasterWhite.jpg-c43e0ecc8ebee5ddc4cc5c5fe0e4d51e.s3tc.ctex"]
 
 [params]
 

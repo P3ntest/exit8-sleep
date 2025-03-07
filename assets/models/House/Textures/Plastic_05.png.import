@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://e5qk1ingghg3"
-path.s3tc="res://.godot/imported/Plastic_05.png-47321e51b42d6f447acbace52eee994b.s3tc.ctex"
+path.s3tc="res://.godot/imported/Plastic_05.png-ad91817f6a602f9f77458fb11fab0b70.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/models/House/textures/Plastic_05.png"
-dest_files=["res://.godot/imported/Plastic_05.png-47321e51b42d6f447acbace52eee994b.s3tc.ctex"]
+source_file="res://assets/models/House/Textures/Plastic_05.png"
+dest_files=["res://.godot/imported/Plastic_05.png-ad91817f6a602f9f77458fb11fab0b70.s3tc.ctex"]
 
 [params]
 

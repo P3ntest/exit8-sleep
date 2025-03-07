@@ -331,6 +331,9 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_metjh")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_8sde6"]
+size = Vector3(0.012707, 0.0214844, 0.0429688)
+
 [sub_resource type="ArrayMesh" id="ArrayMesh_ppvwp"]
 _surfaces = [{
 "aabb": AABB(-0.015528, -0.0238135, -0.01, 0.0310561, 0.0476269, 0.02),
@@ -367,9 +370,6 @@ shadow_mesh = SubResource("ArrayMesh_ppvwp")
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_d3gse"]
 points = PackedVector3Array(0.0085, 0.00966837, 0.0206496, -0.0085, -0.00994701, -0.0211966, -0.00884444, 0.0103222, -0.0220444, -0.00884444, -0.0103444, 0.0220444, 0.0085, -0.0096906, -0.0206496, -0.00884444, 0.0103222, 0.0220444, 0.0085, 0.00966837, -0.0206496, 0.0085, -0.0096906, 0.0206496)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_8sde6"]
-size = Vector3(0.012707, 0.0214844, 0.0429688)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gyce1"]
 resource_name = "Foods_06"
@@ -793,6 +793,14 @@ transform = Transform3D(2.08079, 0, 0, 0, 2.08079, 0, 0, 0, 2.08079, -0.00839447
 mesh = SubResource("ArrayMesh_8qdwa")
 skeleton = NodePath("")
 
+[node name="Interactable" type="Area3D" parent="Refrigerator_door"]
+transform = Transform3D(0.480587, 0, -5.29396e-23, -5.29396e-23, 0.480587, 0, 0, -5.29396e-23, 0.480587, 0.00403427, 0.00455584, -0.00709702)
+script = ExtResource("5_r1w0k")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Refrigerator_door/Interactable"]
+transform = Transform3D(1, -1.41931e-12, 3.21669e-21, 3.17637e-21, 1, -1.41931e-12, -1.41931e-12, 3.17637e-21, 1, -0.00549902, 0, 0)
+shape = SubResource("BoxShape3D_8sde6")
+
 [node name="Box" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.342232, 0, 0, 0, 0.342232, 0, 0, 0, 0.342232, -0.000409737, -0.000100594, -0.0169251)
 mesh = SubResource("ArrayMesh_6vo56")
@@ -808,17 +816,10 @@ script = ExtResource("4_4jd7k")
 item_name = "Fridge"
 open_degrees = 110.0
 doors = [NodePath("../Refrigerator_door_01"), NodePath("../Refrigerator_door")]
-interactable = NodePath("../Interactable")
+interactable = NodePath("../Refrigerator_door/Interactable")
 speed = 130.0
 scare_sound = NodePath("../Scare Sound")
 anomaly = NodePath("../VisibilityAnomaly")
-
-[node name="Interactable" type="Area3D" parent="."]
-script = ExtResource("5_r1w0k")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Interactable"]
-transform = Transform3D(1, -1.41931e-12, 3.21669e-21, 3.17637e-21, 1, -1.41931e-12, -1.41931e-12, 3.17637e-21, 1, -0.00549902, 0, 0)
-shape = SubResource("BoxShape3D_8sde6")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("6_xnivj")

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dxkm2i5lf7lc1"
-path.s3tc="res://.godot/imported/Cake_01.png-ed2105054232aecc6c3d0b591697ce46.s3tc.ctex"
+path.s3tc="res://.godot/imported/Cake_01.png-e7a7dfd9c548b266a1da35473ada204a.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/models/House/textures/Cake_01.png"
-dest_files=["res://.godot/imported/Cake_01.png-ed2105054232aecc6c3d0b591697ce46.s3tc.ctex"]
+source_file="res://assets/models/House/Textures/Cake_01.png"
+dest_files=["res://.godot/imported/Cake_01.png-e7a7dfd9c548b266a1da35473ada204a.s3tc.ctex"]
 
 [params]
 

@@ -127,7 +127,7 @@ texture = ExtResource("1_lra0j")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Sprite3D"]
 stream = ExtResource("2_2fb0b")
-volume_db = 80.0
+volume_db = -26.574
 
 [node name="Trigger" type="Area3D" parent="." node_paths=PackedStringArray("animation_player")]
 script = ExtResource("3_kup5w")

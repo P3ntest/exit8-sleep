@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c2hpqst18kyvj"
-path.s3tc="res://.godot/imported/Refrigerator.png-958f1cd70e2e33154258456dcada8edf.s3tc.ctex"
+path.s3tc="res://.godot/imported/Refrigerator.png-e8f187cf47f640eaec454d065b3d40eb.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/models/House/textures/Refrigerator.png"
-dest_files=["res://.godot/imported/Refrigerator.png-958f1cd70e2e33154258456dcada8edf.s3tc.ctex"]
+source_file="res://assets/models/House/Textures/Refrigerator.png"
+dest_files=["res://.godot/imported/Refrigerator.png-e8f187cf47f640eaec454d065b3d40eb.s3tc.ctex"]
 
 [params]
 

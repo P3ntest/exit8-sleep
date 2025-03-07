@@ -117,10 +117,8 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_fmq6y")
 
-[node name="Dresser2" type="StaticBody3D" node_paths=PackedStringArray("targets")]
+[node name="Dresser2" type="StaticBody3D"]
 transform = Transform3D(-5.56307e-08, 0, 1.0213, 0, 1.0213, 0, -1.27268, 0, -4.46427e-08, -3.96843, -0.0279001, 4.81128)
-script = ExtResource("1_ug7be")
-targets = [NodePath("Node3D"), NodePath("Node3D2"), null]
 
 [node name="Dresser_fbx_Scene" parent="." instance=ExtResource("1_2bta1")]
 transform = Transform3D(1, 0, -3.55271e-15, 0, 1, 0, 3.55271e-15, 0, 1, 0, 0, 0)
@@ -129,20 +127,24 @@ transform = Transform3D(1, 0, -3.55271e-15, 0, 1, 0, 3.55271e-15, 0, 1, 0, 0, 0)
 transform = Transform3D(1, 0, -5.68434e-14, 0, 1, 0, 5.68434e-14, 0, 1, 0, 0.495735, 0)
 shape = SubResource("BoxShape3D_eaqc2")
 
-[node name="Node3D" type="Node3D" parent="."]
+[node name="PositionSwitch" type="Node3D" parent="."]
+script = ExtResource("1_ug7be")
+
+[node name="Node3D" type="Node3D" parent="PositionSwitch"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, -7.10543e-15, 0, 1, 0.418005, 0.97456, 0)
 
-[node name="Plants_03" type="MeshInstance3D" parent="Node3D"]
+[node name="Plants_03" type="MeshInstance3D" parent="PositionSwitch/Node3D"]
 transform = Transform3D(12.29, -1.98952e-13, 1.69407e-20, 0, -1.46509e-06, 12.29, -3.97904e-13, -12.29, -1.46509e-06, 0.00272465, 0.0613399, 0.0547931)
 mesh = SubResource("ArrayMesh_6jo7s")
 skeleton = NodePath("")
 
-[node name="Node3D2" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, -7.10543e-15, 0, 1, 0.0119796, 0.97456, 0)
+[node name="Node3D2" type="Node3D" parent="PositionSwitch"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -7.10543e-15, 0, 1, 0.0119798, 0.97456, 0)
 
-[node name="Video_player" type="MeshInstance3D" parent="Node3D2"]
+[node name="Video_player" type="MeshInstance3D" parent="PositionSwitch/Node3D2"]
 transform = Transform3D(1.69265e-06, 19.3616, 5.77021e-07, -5.77021e-07, 6.0217e-21, 19.3616, 19.3616, -2.26967e-06, 2.18962e-13, 0.0112541, 0.00450492, 0.0352809)
 mesh = SubResource("ArrayMesh_t1wvi")
 skeleton = NodePath("")
 
-[node name="Lamp" parent="." instance=ExtResource("6_vcry4")]
+[node name="Lamp" parent="PositionSwitch" instance=ExtResource("6_vcry4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -7.10543e-15, 0, 1, -0.439642, 0.97456, 0)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bmo8clog5o30h"]
+[gd_scene load_steps=18 format=3 uid="uid://bmo8clog5o30h"]
 
 [ext_resource type="Script" path="res://src/player/player.gd" id="1_d8pis"]
 [ext_resource type="AudioStream" uid="uid://drewrihh34wl5" path="res://assets/sounds/footsteps/concrete-footsteps-1-4.ogg" id="2_58sa1"]
@@ -10,7 +10,8 @@
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_lw8de"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_b6221"]
-radius = 0.265363
+radius = 0.232982
+height = 1.4
 
 [sub_resource type="LabelSettings" id="LabelSettings_w8av8"]
 font_size = 15
@@ -38,23 +39,78 @@ stream_2/stream = ExtResource("4_8ddcx")
 stream_3/stream = ExtResource("5_8th3q")
 stream_4/stream = ExtResource("6_hmw46")
 
-[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("interactable_popup", "interactable_label")]
+[sub_resource type="Animation" id="Animation_4rsry"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_022ba"]
+resource_name = "sleep_"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_agl1y"]
+resource_name = "wake_up"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wp747"]
+_data = {
+"RESET": SubResource("Animation_4rsry"),
+"sleep": SubResource("Animation_022ba"),
+"wake_up": SubResource("Animation_agl1y")
+}
+
+[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("interactable_popup", "interactable_label", "sprint_meter", "animation_player")]
 script = ExtResource("1_d8pis")
 interactable_popup = NodePath("Control/InteractablePopup")
 interactable_label = NodePath("Control/InteractablePopup/InteractableText")
+sprint_meter = NodePath("Control/SprintMeter")
+animation_player = NodePath("AnimationPlayer")
 
 [node name="Visual" type="Node3D" parent="."]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Visual"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+visible = false
 mesh = SubResource("CapsuleMesh_lw8de")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, 0)
 shape = SubResource("CapsuleShape3D_b6221")
 
 [node name="Head" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.42859, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2565, 0)
 
 [node name="CameraMount" type="Node3D" parent="Head"]
 
@@ -111,6 +167,41 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("GradientTexture2D_wu2cg")
 
+[node name="SprintMeter" type="ProgressBar" parent="Control"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -37.405
+offset_right = 200.0
+offset_bottom = -33.405
+grow_horizontal = 2
+grow_vertical = 0
+max_value = 1.0
+step = 0.001
+value = 1.0
+show_percentage = false
+
 [node name="Footstep" type="AudioStreamPlayer3D" parent="."]
 stream = SubResource("AudioStreamRandomizer_sag5e")
 volume_db = 80.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_wp747")
+}

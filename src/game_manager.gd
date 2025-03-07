@@ -10,6 +10,8 @@ extends Node3D
 
 @export var nightmares: Array[PackedScene]
 
+@export var second_chance_hell: PackedScene
+
 const days: Dictionary = {
 	0: "Sunday",
 	1: "Monday",
@@ -100,6 +102,13 @@ func on_exit():
 		for anomaly in enabled_anomalies:
 			print(anomaly.get_path().get_concatenated_names())
 			print(anomaly.name)
+
+		# print("second change hell")
+		# var second_chance = second_chance_hell.instantiate()
+		# current_level.queue_free()
+		# current_level = second_chance
+		# add_child(second_chance)
+		# player.tp_to_spawn()
 		on_lost()
 		restart()
 
@@ -113,8 +122,8 @@ var round_has_anomaly = false
 
 func end_round() -> void:
 	player.frozen = true
-	# animation_player.play("darken")
-	# await animation_player.animation_finished
+	player.animation_player.play("sleep")
+	await player.animation_player.animation_finished
 	return
 
 func can_go_sleep() -> bool:
@@ -153,6 +162,12 @@ func start_round() -> void:
 	add_child(level_instance)
 	current_level = level_instance
 
+	# on sunday (day 0) the lights are on
+	var lights_on = current_day == 0
+	if lights_on:
+		for lamp in get_tree().get_nodes_in_group("lamp"):
+			lamp.turn_on_silent()
+
 	# Spawning player
 	player.tp_to_spawn()
 
@@ -160,6 +175,8 @@ func start_round() -> void:
 	if round_has_anomaly and not is_nightmare:
 		enable_random_anomaly()
 
-	# animation_player.play("lighten")
-	# await animation_player.animation_finished
+	await get_tree().create_timer(1.0).timeout
+
+	player.animation_player.play("wake_up")
+	await player.animation_player.animation_finished
 	player.frozen = false

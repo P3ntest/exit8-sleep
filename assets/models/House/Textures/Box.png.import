@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dugfing8itm88"
-path.s3tc="res://.godot/imported/Box.png-5ccb56d4c6dd80598d5f76b95f27a6cb.s3tc.ctex"
+path.s3tc="res://.godot/imported/Box.png-821ca9a848f87a3b8e120430f210cb9c.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/models/House/textures/Box.png"
-dest_files=["res://.godot/imported/Box.png-5ccb56d4c6dd80598d5f76b95f27a6cb.s3tc.ctex"]
+source_file="res://assets/models/House/Textures/Box.png"
+dest_files=["res://.godot/imported/Box.png-821ca9a848f87a3b8e120430f210cb9c.s3tc.ctex"]
 
 [params]
 

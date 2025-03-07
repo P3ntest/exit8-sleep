@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dm01jid0fgtd8"
-path.s3tc="res://.godot/imported/Desk_lamp_01.png-00d56a84c47a6d0680fe269b1e577138.s3tc.ctex"
+path.s3tc="res://.godot/imported/Desk_lamp_01.png-01ff50ec6886408f093760f7964d39ed.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/models/House/textures/Desk_lamp_01.png"
-dest_files=["res://.godot/imported/Desk_lamp_01.png-00d56a84c47a6d0680fe269b1e577138.s3tc.ctex"]
+source_file="res://assets/models/House/Textures/Desk_lamp_01.png"
+dest_files=["res://.godot/imported/Desk_lamp_01.png-01ff50ec6886408f093760f7964d39ed.s3tc.ctex"]
 
 [params]
 

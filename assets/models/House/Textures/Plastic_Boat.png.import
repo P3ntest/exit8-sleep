@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cr61t1imk88ur"
-path.s3tc="res://.godot/imported/Plastic_Boat.png-a1cd6dfbaac8758974816a1f554c948a.s3tc.ctex"
+path.s3tc="res://.godot/imported/Plastic_Boat.png-7a4c3392c929f04320e29ea379f75117.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/models/House/textures/Plastic_Boat.png"
-dest_files=["res://.godot/imported/Plastic_Boat.png-a1cd6dfbaac8758974816a1f554c948a.s3tc.ctex"]
+source_file="res://assets/models/House/Textures/Plastic_Boat.png"
+dest_files=["res://.godot/imported/Plastic_Boat.png-7a4c3392c929f04320e29ea379f75117.s3tc.ctex"]
 
 [params]
 

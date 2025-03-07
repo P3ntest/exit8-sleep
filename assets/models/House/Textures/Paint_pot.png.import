@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://buca12duuqjtt"
-path.s3tc="res://.godot/imported/Paint_pot.png-2d2c265534925fb8470646171035e346.s3tc.ctex"
+path.s3tc="res://.godot/imported/Paint_pot.png-cba05d94228697afc2f10617c1c17e18.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/models/House/textures/Paint_pot.png"
-dest_files=["res://.godot/imported/Paint_pot.png-2d2c265534925fb8470646171035e346.s3tc.ctex"]
+source_file="res://assets/models/House/Textures/Paint_pot.png"
+dest_files=["res://.godot/imported/Paint_pot.png-cba05d94228697afc2f10617c1c17e18.s3tc.ctex"]
 
 [params]
 

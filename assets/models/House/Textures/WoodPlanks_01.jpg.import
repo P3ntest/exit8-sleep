@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cab0upgy16w1w"
-path.s3tc="res://.godot/imported/WoodPlanks_01.jpg-1bad024919de0b447253681119f6a6ef.s3tc.ctex"
+path.s3tc="res://.godot/imported/WoodPlanks_01.jpg-a0053e21500a007819491437d0e41e37.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/models/House/textures/WoodPlanks_01.jpg"
-dest_files=["res://.godot/imported/WoodPlanks_01.jpg-1bad024919de0b447253681119f6a6ef.s3tc.ctex"]
+source_file="res://assets/models/House/Textures/WoodPlanks_01.jpg"
+dest_files=["res://.godot/imported/WoodPlanks_01.jpg-a0053e21500a007819491437d0e41e37.s3tc.ctex"]
 
 [params]
 

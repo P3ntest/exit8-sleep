@@ -1271,8 +1271,12 @@ skeleton = NodePath("")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Fences/Concrete_03"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Fences/Concrete_03/StaticBody3D"]
-shape = SubResource("ConvexPolygonShape3D_kpt58")
+[node name="Concrete_06" type="MeshInstance3D" parent="Fences"]
+transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, 13.4663, 0.216471, 37.7162)
+mesh = SubResource("ArrayMesh_fnguy")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Fences/Concrete_06"]
 
 [node name="Concrete_05" type="MeshInstance3D" parent="Fences"]
 transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, -8.19024, 0.216471, 27.0234)
@@ -3655,7 +3659,7 @@ skeleton = NodePath("")
 shape = SubResource("ConcavePolygonShape3D_to3ne")
 
 [node name="Wall66" type="MeshInstance3D" parent="NavigationRegion3D/Walls"]
-transform = Transform3D(-2.18557e-05, -100, -1.19209e-05, 0, -1.19209e-05, 100, -100, 2.18557e-05, 2.6054e-12, -11.6179, 1.25583, 21.7107)
+transform = Transform3D(-2.18557e-05, -100, -1.19209e-05, 0, -1.19209e-05, 100, -100, 2.18557e-05, 2.6054e-12, -11.5801, 1.25583, 21.5879)
 mesh = SubResource("ArrayMesh_r46bm")
 skeleton = NodePath("")
 
@@ -4134,16 +4138,6 @@ skeleton = NodePath("")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Walls/Wall48/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_to3ne")
 
-[node name="Wall57" type="MeshInstance3D" parent="NavigationRegion3D/Walls"]
-transform = Transform3D(-4.37114e-06, -100, -1.19209e-05, 0, -1.19209e-05, 100, -100, 4.37114e-06, 5.2108e-13, 13.3231, 1.25583, 35.7939)
-mesh = SubResource("ArrayMesh_r46bm")
-skeleton = NodePath("")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Walls/Wall57"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Walls/Wall57/StaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_to3ne")
-
 [node name="Wall58" type="MeshInstance3D" parent="NavigationRegion3D/Walls"]
 transform = Transform3D(-4.37114e-06, -100, -1.19209e-05, 0, -1.19209e-05, 100, -100, 4.37114e-06, 5.2108e-13, 13.3366, 1.25583, 39.2904)
 mesh = SubResource("ArrayMesh_r46bm")
@@ -4312,6 +4306,16 @@ skeleton = NodePath("")
 [node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Walls/Wall_05"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Walls/Wall_05/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_1j13r")
+
+[node name="Wall_08" type="MeshInstance3D" parent="NavigationRegion3D/Walls"]
+transform = Transform3D(-4.37114e-06, -100, -1.19209e-05, 0, -1.19209e-05, 100, -100, 4.37114e-06, 5.2108e-13, 13.3208, 1.22882, 35.5651)
+mesh = SubResource("ArrayMesh_iqr3g")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Walls/Wall_08"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Walls/Wall_08/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_1j13r")
 
 [node name="Wall_07" type="MeshInstance3D" parent="NavigationRegion3D/Walls"]
@@ -4714,6 +4718,7 @@ skeleton = NodePath("")
 transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 0, 26.1478, 30.5258)
 environment = SubResource("Environment_6hub2")
 projection = 1
+current = true
 size = 75.7022
 
 [node name="CrowSpawns" type="Node3D" parent="."]

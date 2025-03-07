@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bo6o7qdrjpal8"
-path.s3tc="res://.godot/imported/trash_can_01png.png-4c3b85456c48b833ad0beb14679c8ebf.s3tc.ctex"
+path.s3tc="res://.godot/imported/trash_can_01png.png-48883420f7d895a70215997c7119639b.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/models/House/textures/trash_can_01png.png"
-dest_files=["res://.godot/imported/trash_can_01png.png-4c3b85456c48b833ad0beb14679c8ebf.s3tc.ctex"]
+source_file="res://assets/models/House/Textures/trash_can_01png.png"
+dest_files=["res://.godot/imported/trash_can_01png.png-48883420f7d895a70215997c7119639b.s3tc.ctex"]
 
 [params]
 

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b1tvj6xknma3o"
-path.s3tc="res://.godot/imported/Shelving.png-52ad4d11c5390d16b3b57d6bdcc23faa.s3tc.ctex"
+path.s3tc="res://.godot/imported/Shelving.png-f81e52a1c2ab22f5d5d67a9884d3f2aa.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/models/House/textures/Shelving.png"
-dest_files=["res://.godot/imported/Shelving.png-52ad4d11c5390d16b3b57d6bdcc23faa.s3tc.ctex"]
+source_file="res://assets/models/House/Textures/Shelving.png"
+dest_files=["res://.godot/imported/Shelving.png-f81e52a1c2ab22f5d5d67a9884d3f2aa.s3tc.ctex"]
 
 [params]
 

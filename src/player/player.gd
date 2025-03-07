@@ -3,8 +3,8 @@ extends CharacterBody3D
 
 @export var debug: bool = false
 
-const SPEED = 2.8
-const JUMP_VELOCITY = 4.5
+const SPEED = 2.5
+const JUMP_VELOCITY = 3.0
 
 const MOUSE_SENSITIVITY = 0.002
 
@@ -19,6 +19,8 @@ var frozen = true
 @export var interactable_popup: Control
 @export var interactable_label: Label
 @export var game_manager: GameManager
+@export var sprint_meter: ProgressBar
+@export var animation_player: AnimationPlayer
 
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
@@ -26,6 +28,7 @@ func _ready():
 
 	if debug:
 		frozen = false
+		animation_player.play("wake_up")
 
 func tp_to_spawn() -> void:
 	var spawn = get_tree().get_first_node_in_group("player_spawn")
@@ -60,12 +63,25 @@ var bob_intensity = 0.0
 var bob_position = 0.0
 var footstep_charge = 0.0
 
+var stamina = 1.0
+var stamina_cooldown = 0.0
+const sprint_regen = 0.5
+
+func update_sprint_meter():
+	if stamina == 1.0:
+		sprint_meter.visible = false
+		return
+	sprint_meter.visible = true
+	sprint_meter.value = stamina
+
 func _physics_process(delta: float) -> void:
 	if frozen:
 		return
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
+	if is_on_floor() and Input.is_action_just_pressed("jump"):
+		velocity.y = JUMP_VELOCITY
 
 	if interactable_cast.is_colliding() and interactable_cast.get_collider() is Interactable:
 		var interactable = interactable_cast.get_collider() as Interactable
@@ -86,12 +102,25 @@ func _physics_process(delta: float) -> void:
 	# if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 	# 	velocity.y = JUMP_VELOCITY
 
+	# Handle sprinting.
+	var speed = SPEED
+	stamina_cooldown -= delta
+	if Input.is_action_pressed("sprint") and stamina > 0.0:
+		stamina = move_toward(stamina, 0.0, sprint_regen * delta)
+		if stamina == 0.0:
+			stamina_cooldown = 1.5
+		speed *= 2.0
+	else:
+		if stamina_cooldown <= 0.0:
+			stamina = move_toward(stamina, 1.0, sprint_regen * delta)
+	update_sprint_meter()
+
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var input_dir := Input.get_vector("left", "right", "forward", "backward")
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	velocity.x = lerp(velocity.x, direction.x * SPEED, 10 * delta)
-	velocity.z = lerp(velocity.z, direction.z * SPEED, 10 * delta)
+	velocity.x = lerp(velocity.x, direction.x * speed, 10 * delta)
+	velocity.z = lerp(velocity.z, direction.z * speed, 10 * delta)
 
 	bob_position  += get_real_velocity().length() * delta * 4
 	bob_intensity = lerp(bob_intensity, 1.0 if get_real_velocity().length() > 0.1 else 0.0, 3 * delta)

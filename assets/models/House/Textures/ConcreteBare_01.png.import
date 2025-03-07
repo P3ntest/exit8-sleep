@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cc5f4a4mv8r2j"
-path.s3tc="res://.godot/imported/ConcreteBare_01.png-2418c6fe47686523c407b7b6c37f2d03.s3tc.ctex"
+path.s3tc="res://.godot/imported/ConcreteBare_01.png-d1feacda7acb30304a67e0720dbce668.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/models/House/textures/ConcreteBare_01.png"
-dest_files=["res://.godot/imported/ConcreteBare_01.png-2418c6fe47686523c407b7b6c37f2d03.s3tc.ctex"]
+source_file="res://assets/models/House/Textures/ConcreteBare_01.png"
+dest_files=["res://.godot/imported/ConcreteBare_01.png-d1feacda7acb30304a67e0720dbce668.s3tc.ctex"]
 
 [params]
 

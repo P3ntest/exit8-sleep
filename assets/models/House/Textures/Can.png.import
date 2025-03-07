@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://35utfaisgqdr"
-path.s3tc="res://.godot/imported/Can.png-0f2d2acea9cb4d08b5c81c1d575d207c.s3tc.ctex"
+path.s3tc="res://.godot/imported/Can.png-8d7358fc183d71a5704d2e2387b04781.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/models/House/textures/Can.png"
-dest_files=["res://.godot/imported/Can.png-0f2d2acea9cb4d08b5c81c1d575d207c.s3tc.ctex"]
+source_file="res://assets/models/House/Textures/Can.png"
+dest_files=["res://.godot/imported/Can.png-8d7358fc183d71a5704d2e2387b04781.s3tc.ctex"]
 
 [params]
 

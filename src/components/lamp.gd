@@ -6,11 +6,17 @@ class_name Lamp extends Interactable
 
 var on = false
 
+func turn_on_silent():
+    on = true
+    push_state()
+
 func push_state():
     light.visible = on
     action_text = "Turn off" if on else "Turn on"
 
 func _ready():
+    add_to_group("lamp")
+    
     if not light:
         push_error("Lamp requires a Light3D node.")
 

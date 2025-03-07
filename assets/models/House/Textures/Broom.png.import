@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cdx1p0ev3yccw"
-path.s3tc="res://.godot/imported/Broom.png-b41980fe0878081fb8ce46a4e507d666.s3tc.ctex"
+path.s3tc="res://.godot/imported/Broom.png-ee1d8c3b2ecd2d3ca031fc7096ee5bcd.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/models/House/textures/Broom.png"
-dest_files=["res://.godot/imported/Broom.png-b41980fe0878081fb8ce46a4e507d666.s3tc.ctex"]
+source_file="res://assets/models/House/Textures/Broom.png"
+dest_files=["res://.godot/imported/Broom.png-ee1d8c3b2ecd2d3ca031fc7096ee5bcd.s3tc.ctex"]
 
 [params]
 

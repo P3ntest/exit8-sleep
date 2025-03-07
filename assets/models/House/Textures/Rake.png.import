@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cbhqgwlqb7g80"
-path.s3tc="res://.godot/imported/Rake.png-9c4abc42cceea5532bd84d87449cf47a.s3tc.ctex"
+path.s3tc="res://.godot/imported/Rake.png-a1e6f12fe3d160af351e7f880f275dc5.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/models/House/textures/Rake.png"
-dest_files=["res://.godot/imported/Rake.png-9c4abc42cceea5532bd84d87449cf47a.s3tc.ctex"]
+source_file="res://assets/models/House/Textures/Rake.png"
+dest_files=["res://.godot/imported/Rake.png-a1e6f12fe3d160af351e7f880f275dc5.s3tc.ctex"]
 
 [params]
 
