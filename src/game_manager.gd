@@ -45,7 +45,7 @@ func get_anomalies() -> Array[Anomaly]:
 		return get_anomalies()
 	return anomalies
 
-const DEV_ALL_ANOMALIES = true
+const DEV_ALL_ANOMALIES = false
 var enabled_anomalies: Array[Anomaly] = []
 func enable_random_anomaly() -> void:
 	enabled_anomalies.clear()

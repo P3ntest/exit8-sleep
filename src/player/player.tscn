@@ -1,6 +1,6 @@
 [gd_scene load_steps=18 format=3 uid="uid://bmo8clog5o30h"]
 
-[ext_resource type="Script" path="res://src/player/player.gd" id="1_d8pis"]
+[ext_resource type="Script" uid="uid://dg100o12uwbl1" path="res://src/player/player.gd" id="1_d8pis"]
 [ext_resource type="AudioStream" uid="uid://drewrihh34wl5" path="res://assets/sounds/footsteps/concrete-footsteps-1-4.ogg" id="2_58sa1"]
 [ext_resource type="AudioStream" uid="uid://dd7k65hwct1je" path="res://assets/sounds/footsteps/concrete-footsteps-1.ogg" id="3_rjurd"]
 [ext_resource type="AudioStream" uid="uid://bg1igmuowuet3" path="res://assets/sounds/footsteps/concrete-footsteps-2.ogg" id="4_8ddcx"]
@@ -86,9 +86,9 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_wp747"]
 _data = {
-"RESET": SubResource("Animation_4rsry"),
-"sleep": SubResource("Animation_022ba"),
-"wake_up": SubResource("Animation_agl1y")
+&"RESET": SubResource("Animation_4rsry"),
+&"sleep": SubResource("Animation_022ba"),
+&"wake_up": SubResource("Animation_agl1y")
 }
 
 [node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("interactable_popup", "interactable_label", "sprint_meter", "animation_player")]
@@ -203,5 +203,5 @@ color = Color(0, 0, 0, 1)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_wp747")
+&"": SubResource("AnimationLibrary_wp747")
 }

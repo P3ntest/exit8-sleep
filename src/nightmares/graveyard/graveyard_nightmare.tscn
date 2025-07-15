@@ -1,7 +1,7 @@
 [gd_scene load_steps=90 format=4 uid="uid://s3neqk4iw6ls"]
 
 [ext_resource type="Texture2D" uid="uid://caopi8pfps3gu" path="res://assets/textures/psx_128x128/Dirt/Dirt_01-128x128.png" id="1_3bgcn"]
-[ext_resource type="Script" path="res://src/nightmares/graveyard/graveyard_nightmare.gd" id="1_acq3d"]
+[ext_resource type="Script" uid="uid://j3iyqe855qtj" path="res://src/nightmares/graveyard/graveyard_nightmare.gd" id="1_acq3d"]
 [ext_resource type="Texture2D" uid="uid://s0i6jgci4lgq" path="res://assets/hdris/rogland_clear_night_1k.hdr" id="1_vulpm"]
 [ext_resource type="Texture2D" uid="uid://cakq835pw2s8q" path="res://assets/models/halloween/Textures/Farmland.jpg" id="2_jan36"]
 [ext_resource type="PackedScene" uid="uid://ciq3ouk1fmy1n" path="res://src/nightmares/graveyard/pumpkin.tscn" id="2_qxu33"]
@@ -4718,7 +4718,6 @@ skeleton = NodePath("")
 transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 0, 26.1478, 30.5258)
 environment = SubResource("Environment_6hub2")
 projection = 1
-current = true
 size = 75.7022
 
 [node name="CrowSpawns" type="Node3D" parent="."]

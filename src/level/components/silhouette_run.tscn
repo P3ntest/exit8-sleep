@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://ixxhg6fnkpch" path="res://assets/textures/image-removebg-preview_9_1_optimized (1).png" id="1_lra0j"]
 [ext_resource type="AudioStream" uid="uid://bh642ek0hn5eu" path="res://assets/sounds/jumpscare-94984.mp3" id="2_2fb0b"]
-[ext_resource type="Script" path="res://src/helpers/animation_trigger_zone.gd" id="3_kup5w"]
-[ext_resource type="Script" path="res://src/anomalies/visibility_anomaly.gd" id="4_jnf2n"]
+[ext_resource type="Script" uid="uid://c21t3pa4yi4cm" path="res://src/helpers/animation_trigger_zone.gd" id="3_kup5w"]
+[ext_resource type="Script" uid="uid://uum0vctfr5tk" path="res://src/anomalies/visibility_anomaly.gd" id="4_jnf2n"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_01aq1"]
 size = Vector3(1, 1, 5.54425)
@@ -114,8 +114,8 @@ tracks/3/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_l8amy"]
 _data = {
-"RESET": SubResource("Animation_ov1so"),
-"scare": SubResource("Animation_gk4yl")
+&"RESET": SubResource("Animation_ov1so"),
+&"scare": SubResource("Animation_gk4yl")
 }
 
 [node name="Node3D" type="Node3D"]
@@ -140,7 +140,7 @@ shape = SubResource("BoxShape3D_01aq1")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_l8amy")
+&"": SubResource("AnimationLibrary_l8amy")
 }
 
 [node name="VisibilityAnomaly" type="Node3D" parent="." node_paths=PackedStringArray("targets")]

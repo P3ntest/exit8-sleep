@@ -1,9 +1,9 @@
 [gd_scene load_steps=17 format=4 uid="uid://cbqk3nbpr2r4x"]
 
-[ext_resource type="Script" path="res://src/level/components/openable.gd" id="1_afkf7"]
+[ext_resource type="Script" uid="uid://b8indfndg5ap4" path="res://src/level/components/openable.gd" id="1_afkf7"]
 [ext_resource type="Texture2D" uid="uid://c5dt47dep3jgt" path="res://assets/models/PSX Pack 3/Textures/Foods_06.jpg" id="1_g2px7"]
-[ext_resource type="Script" path="res://src/components/interactable.gd" id="2_5palo"]
-[ext_resource type="Script" path="res://src/anomalies/visibility_anomaly.gd" id="2_v7uif"]
+[ext_resource type="Script" uid="uid://nooobk1uqkb7" path="res://src/components/interactable.gd" id="2_5palo"]
+[ext_resource type="Script" uid="uid://uum0vctfr5tk" path="res://src/anomalies/visibility_anomaly.gd" id="2_v7uif"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gyce1"]
 resource_name = "Foods_06"

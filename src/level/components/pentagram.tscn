@@ -1,11 +1,11 @@
 [gd_scene load_steps=22 format=4 uid="uid://bgypb1i7sxl76"]
 
 [ext_resource type="Texture2D" uid="uid://ckxk5cwmqhecn" path="res://assets/textures/pngimg.com_-_pentagram_PNG23_optimized.png" id="1_ivrrt"]
-[ext_resource type="Script" path="res://src/level/components/pentagram.gd" id="1_sop27"]
-[ext_resource type="Script" path="res://src/anomalies/visibility_anomaly.gd" id="2_mgf3v"]
+[ext_resource type="Script" uid="uid://bqxa2uyeftwrn" path="res://src/level/components/pentagram.gd" id="1_sop27"]
+[ext_resource type="Script" uid="uid://uum0vctfr5tk" path="res://src/anomalies/visibility_anomaly.gd" id="2_mgf3v"]
 [ext_resource type="Texture2D" uid="uid://c512kjrjnrw7w" path="res://assets/models/halloween/Textures/Candles.png" id="3_g3mnr"]
 [ext_resource type="Texture2D" uid="uid://cn6kvsubdqnwg" path="res://assets/models/halloween/Textures/Candles_Emissor.png" id="4_ttoyl"]
-[ext_resource type="Script" path="res://src/level/components/candle_light.gd" id="5_32kiw"]
+[ext_resource type="Script" uid="uid://dpw4lngviies3" path="res://src/level/components/candle_light.gd" id="5_32kiw"]
 [ext_resource type="AudioStream" uid="uid://cpfgqongi6o2j" path="res://assets/sounds/whispering/demonic-whisper-100425.mp3" id="5_e3ec3"]
 [ext_resource type="AudioStream" uid="uid://c73si3f1jt3jw" path="res://assets/sounds/whispering/whisper-fluisteren-212192.mp3" id="6_a5nys"]
 [ext_resource type="AudioStream" uid="uid://os40o4efdvt5" path="res://assets/sounds/demon/lamentos-del-infierno-194453.mp3" id="8_l4an5"]
@@ -155,8 +155,8 @@ tracks/6/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mquj5"]
 _data = {
-"RESET": SubResource("Animation_i1ixq"),
-"demon_spawn": SubResource("Animation_m5qo0")
+&"RESET": SubResource("Animation_i1ixq"),
+&"demon_spawn": SubResource("Animation_m5qo0")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_crbm5"]
@@ -215,7 +215,7 @@ size = Vector3(2.11176, 1, 2.5127)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_mquj5")
+&"": SubResource("AnimationLibrary_mquj5")
 }
 
 [node name="DemonSounds" type="Node3D" parent="."]
