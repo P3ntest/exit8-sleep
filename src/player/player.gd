@@ -21,6 +21,8 @@ var frozen = true
 @export var game_manager: GameManager
 @export var sprint_meter: ProgressBar
 @export var animation_player: AnimationPlayer
+@export var title_label: Label
+@export var subtitle_label: Label
 
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED

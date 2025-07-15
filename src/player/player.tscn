@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bmo8clog5o30h"]
+[gd_scene load_steps=23 format=3 uid="uid://bmo8clog5o30h"]
 
 [ext_resource type="Script" uid="uid://dg100o12uwbl1" path="res://src/player/player.gd" id="1_d8pis"]
 [ext_resource type="AudioStream" uid="uid://drewrihh34wl5" path="res://assets/sounds/footsteps/concrete-footsteps-1-4.ogg" id="2_58sa1"]
@@ -6,6 +6,8 @@
 [ext_resource type="AudioStream" uid="uid://bg1igmuowuet3" path="res://assets/sounds/footsteps/concrete-footsteps-2.ogg" id="4_8ddcx"]
 [ext_resource type="AudioStream" uid="uid://bwfuewerpc1k" path="res://assets/sounds/footsteps/concrete-footsteps-3.ogg" id="5_8th3q"]
 [ext_resource type="AudioStream" uid="uid://88ljwbqw8bgm" path="res://assets/sounds/footsteps/concrete-footsteps-5.ogg" id="6_hmw46"]
+[ext_resource type="AudioStream" uid="uid://oeqh8e5c2x17" path="res://assets/sounds/scares/Jumpscare Sound Effect.wav" id="7_o822w"]
+[ext_resource type="FontFile" uid="uid://doksxqpqikhjo" path="res://assets/fonts/Seven Segment.ttf" id="7_x42xx"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_lw8de"]
 
@@ -39,6 +41,14 @@ stream_2/stream = ExtResource("4_8ddcx")
 stream_3/stream = ExtResource("5_8th3q")
 stream_4/stream = ExtResource("6_hmw46")
 
+[sub_resource type="LabelSettings" id="LabelSettings_l271a"]
+font = ExtResource("7_x42xx")
+font_size = 41
+
+[sub_resource type="LabelSettings" id="LabelSettings_8ydov"]
+font = ExtResource("7_x42xx")
+font_size = 20
+
 [sub_resource type="Animation" id="Animation_4rsry"]
 length = 0.001
 tracks/0/type = "value"
@@ -52,6 +62,18 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Head/CameraMount/Camera3D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_022ba"]
@@ -71,6 +93,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_agl1y"]
 resource_name = "wake_up"
+length = 3.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -78,25 +101,68 @@ tracks/0/path = NodePath("ColorRect:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
+"times": PackedFloat32Array(0, 2.3, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_jiejy"]
+resource_name = "nightmare"
+capture_included = true
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Head/CameraMount/Camera3D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.533333),
+"transitions": PackedFloat32Array(1),
+"update": 2,
+"values": [Vector3(0, -2.88, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("NightmareJumpscare:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_wp747"]
 _data = {
 &"RESET": SubResource("Animation_4rsry"),
+&"nightmare": SubResource("Animation_jiejy"),
 &"sleep": SubResource("Animation_022ba"),
 &"wake_up": SubResource("Animation_agl1y")
 }
 
-[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("interactable_popup", "interactable_label", "sprint_meter", "animation_player")]
+[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("interactable_popup", "interactable_label", "sprint_meter", "animation_player", "title_label", "subtitle_label")]
 script = ExtResource("1_d8pis")
 interactable_popup = NodePath("Control/InteractablePopup")
 interactable_label = NodePath("Control/InteractablePopup/InteractableText")
 sprint_meter = NodePath("Control/SprintMeter")
 animation_player = NodePath("AnimationPlayer")
+title_label = NodePath("ColorRect/VBoxContainer/Title")
+subtitle_label = NodePath("ColorRect/VBoxContainer/Subtitle")
 
 [node name="Visual" type="Node3D" parent="."]
 
@@ -201,7 +267,35 @@ size_flags_vertical = 3
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_l271a")
+horizontal_alignment = 1
+
+[node name="Subtitle" type="Label" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_8ydov")
+horizontal_alignment = 1
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_wp747")
 }
+
+[node name="NightmareJumpscare" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_o822w")
+volume_db = -10.0

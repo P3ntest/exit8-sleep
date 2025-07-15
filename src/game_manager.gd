@@ -80,7 +80,7 @@ func on_sleep():
 		restart()
 
 func on_complete_nightmare():
-	next_day()
+	restart()
 
 func next_day():
 	current_day += 1
@@ -99,18 +99,7 @@ func on_exit():
 		next_day()
 	else:
 		print("lost due to anomaly not found")
-		for anomaly in enabled_anomalies:
-			print(anomaly.get_path().get_concatenated_names())
-			print(anomaly.name)
-
-		# print("second change hell")
-		# var second_chance = second_chance_hell.instantiate()
-		# current_level.queue_free()
-		# current_level = second_chance
-		# add_child(second_chance)
-		# player.tp_to_spawn()
-		on_lost()
-		restart()
+		enter_nightmare()
 
 var current_level: Node = null
 
@@ -122,6 +111,8 @@ var round_has_anomaly = false
 
 func end_round() -> void:
 	player.frozen = true
+	player.title_label.text = ""
+	player.subtitle_label.text = ""
 	player.animation_player.play("sleep")
 	await player.animation_player.animation_finished
 	return
@@ -131,6 +122,26 @@ func can_go_sleep() -> bool:
 		if not anomaly.can_go_sleep:
 			return false
 	return true
+
+func enter_nightmare():
+	player.frozen = true
+	player.title_label.text = "You were still dreaming."
+	player.subtitle_label.text = "Escape the nightmare to continue"
+	player.animation_player.play("nightmare")
+	await player.animation_player.animation_finished
+	player.animation_player.play("RESET")
+	await player.animation_player.animation_finished
+	set_level_to(nightmares.pick_random())
+	player.tp_to_spawn()
+	player.animation_player.play("wake_up")
+	await player.animation_player.animation_finished
+	player.frozen = false
+	
+func set_level_to(new_level: PackedScene) -> void:
+	if current_level:
+		current_level.free()
+	current_level = new_level.instantiate()
+	add_child(current_level)
 
 var grace_round = true
 var anomaly_rounds = 0
@@ -148,19 +159,8 @@ func start_round() -> void:
 		grace_round = false
 		round_has_anomaly = false
 
-	var nightmare_chance = randf() < 0.1
-
-	var is_nightmare = round_has_anomaly and nightmare_chance and nightmares.size() > 0
-	var nightmare = nightmares.pick_random() if is_nightmare else null
-	if nightmare:
-		nightmares.erase(nightmare)
-
 	# Spawning the level
-	if current_level:
-		current_level.free()
-	var level_instance = (level if not is_nightmare else nightmare).instantiate()
-	add_child(level_instance)
-	current_level = level_instance
+	set_level_to(level)
 
 	# on sunday (day 0) the lights are on
 	var lights_on = current_day == 0
@@ -172,11 +172,18 @@ func start_round() -> void:
 	player.tp_to_spawn()
 
 	# Spawning anomaly
-	if round_has_anomaly and not is_nightmare:
+	if round_has_anomaly:
 		enable_random_anomaly()
 
 	await get_tree().create_timer(1.0).timeout
 
+	player.title_label.text = get_day_name(current_day)
+	player.subtitle_label.text = "Am I dreaming?" 
 	player.animation_player.play("wake_up")
 	await player.animation_player.animation_finished
 	player.frozen = false
+
+func get_day_name(day: int) -> String:
+	if day < 0 or day >= len(days):
+		return "Invalid Day"
+	return days[day]

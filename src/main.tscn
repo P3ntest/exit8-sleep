@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://cqqa650qep23i"]
 
 [ext_resource type="PackedScene" uid="uid://bmo8clog5o30h" path="res://src/player/player.tscn" id="1_3orup"]
-[ext_resource type="Shader" path="res://src/level/main.gdshader" id="1_cht7b"]
-[ext_resource type="Script" path="res://src/game_manager.gd" id="2_j4dyo"]
+[ext_resource type="Shader" uid="uid://j8tcfaosquaw" path="res://src/level/main.gdshader" id="1_cht7b"]
+[ext_resource type="Script" uid="uid://d1p8up0isfame" path="res://src/game_manager.gd" id="2_j4dyo"]
 [ext_resource type="PackedScene" uid="uid://cp63x858uotms" path="res://src/level/level.tscn" id="4_2lwo7"]
 [ext_resource type="PackedScene" uid="uid://s3neqk4iw6ls" path="res://src/nightmares/graveyard/graveyard_nightmare.tscn" id="5_h0sgw"]
 

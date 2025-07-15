@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://oeqh8e5c2x17"
+path="res://.godot/imported/Jumpscare Sound Effect.wav-8e2769fad4f07602cb9c8588167432e5.sample"
+
+[deps]
+
+source_file="res://assets/sounds/scares/Jumpscare Sound Effect.wav"
+dest_files=["res://.godot/imported/Jumpscare Sound Effect.wav-8e2769fad4f07602cb9c8588167432e5.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
