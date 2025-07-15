@@ -10,7 +10,7 @@ extends Node3D
 
 @export var nightmares: Array[PackedScene]
 
-@export var second_chance_hell: PackedScene
+@export var game_over_slept: PackedScene
 
 const days: Dictionary = {
 	0: "Sunday",
@@ -29,10 +29,15 @@ func _ready() -> void:
 func get_calendar_day():
 	return current_day
 
+var goto_slept_game_over = false
 var timer: float = 0.0
 func _process(delta):
 	if current_day != 0:
 		timer += delta
+
+	if goto_slept_game_over:
+		goto_slept_game_over = false
+		get_tree().change_scene_to_packed(game_over_slept)
 
 var used_anomalies: Array[String] = []
 func get_anomalies() -> Array[Anomaly]:
@@ -76,8 +81,9 @@ func on_sleep():
 	elif round_has_anomaly:
 		restart()
 	else:
-		on_lost()
-		restart()
+		await end_round()
+		goto_slept_game_over = true
+		
 
 func on_complete_nightmare():
 	restart()
@@ -106,7 +112,7 @@ var current_level: Node = null
 var current_day: int = 0:
 	set(value):
 		current_day = value
-		anomaly_rounds = randi_range(0, 8)
+		anomaly_rounds = randi_range(0, 0)
 var round_has_anomaly = false
 
 func end_round() -> void:
