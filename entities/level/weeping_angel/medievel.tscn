@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://waf6em0l6ru5"]
+
+[ext_resource type="Texture2D" uid="uid://dsr4gc71ud7n4" path="res://assets/hdris/medieval_cafe_1k.hdr" id="1_rxl8n"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_1ccxp"]
+panorama = ExtResource("1_rxl8n")
+
+[sub_resource type="Sky" id="Sky_lny1d"]
+sky_material = SubResource("PanoramaSkyMaterial_1ccxp")
+
+[sub_resource type="Environment" id="Environment_nn8jx"]
+background_mode = 2
+sky = SubResource("Sky_lny1d")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="Node3D" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_nn8jx")

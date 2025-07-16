@@ -1,0 +1,59 @@
+[gd_scene load_steps=6 format=3 uid="uid://ddpyecacsuct"]
+
+[ext_resource type="Script" uid="uid://c3m5lqhqm1vgp" path="res://entities/ui/main_menu/main_menu.gd" id="1_f8jsl"]
+[ext_resource type="PackedScene" uid="uid://cqqa650qep23i" path="res://entities/game/main.tscn" id="2_h07md"]
+[ext_resource type="FontFile" uid="uid://doksxqpqikhjo" path="res://assets/fonts/Seven Segment.ttf" id="2_qtx32"]
+[ext_resource type="Texture2D" uid="uid://cluuscska84tl" path="res://assets/textures/Screenshot 2025-03-01 134331.png" id="3_obr5q"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_mrkbj"]
+font = ExtResource("2_qtx32")
+font_size = 100
+font_color = Color(0.85098, 0, 0, 1)
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Control" type="Control" node_paths=PackedStringArray("play_button")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_f8jsl")
+play_button = NodePath("Button")
+main_game = ExtResource("2_h07md")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_obr5q")
+expand_mode = 5
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -315.5
+offset_top = 41.755
+offset_right = 315.5
+offset_bottom = 146.755
+grow_horizontal = 2
+text = "Am I Dreaming?"
+label_settings = SubResource("LabelSettings_mrkbj")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.5
+offset_top = 153.23
+offset_right = 20.5
+offset_bottom = 184.23
+grow_horizontal = 2
+text = "Play"

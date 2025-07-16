@@ -1,8 +1,0 @@
-[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://hqjuumsshal4"]
-
-[ext_resource type="Shader" uid="uid://chh600fluxqec" path="res://src/level/components/living_room_tv_static.gdshader" id="1_chu48"]
-
-[resource]
-render_priority = 0
-shader = ExtResource("1_chu48")
-shader_parameter/amount = 5.0
