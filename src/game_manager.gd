@@ -6,8 +6,6 @@ extends Node3D
 @export var weekday_label: Label
 @export var day_text_label: Label
 
-@export var main_menu: PackedScene
-
 @export var nightmares: Array[PackedScene]
 
 @export var game_over_slept: PackedScene
@@ -94,7 +92,7 @@ func next_day():
 		weekday_label.text = "You won!"
 		day_text_label.text = "It took you " + str(int(timer)) + " seconds to survive the week."
 		await get_tree().create_timer(5.0).timeout
-		get_tree().change_scene_to_packed(main_menu)
+		get_tree().change_scene_to_file("res://src/ui/main_menu.tscn")
 		pass
 	restart()
 
@@ -112,7 +110,7 @@ var current_level: Node = null
 var current_day: int = 0:
 	set(value):
 		current_day = value
-		anomaly_rounds = randi_range(0, 0)
+		anomaly_rounds = randi_range(0, 8)
 var round_has_anomaly = false
 
 func end_round() -> void:
@@ -184,7 +182,10 @@ func start_round() -> void:
 	await get_tree().create_timer(1.0).timeout
 
 	player.title_label.text = get_day_name(current_day)
-	player.subtitle_label.text = "Am I dreaming?" 
+	if current_day == 0:
+		player.subtitle_label.text = ""
+	else:
+		player.subtitle_label.text = "Am I dreaming?" 
 	player.animation_player.play("wake_up")
 	await player.animation_player.animation_finished
 	player.frozen = false

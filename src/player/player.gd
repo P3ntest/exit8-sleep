@@ -47,7 +47,8 @@ var cam_transition_amount: float = 0.0
 func can_look_around():
 	return not frozen and cam_transition_amount == 0.0
 
-# func _process(delta):
+func _process(delta):
+	camera.fov = lerp(camera.fov, target_fov, 5 * delta)
 # 	cam_transition_amount = move_toward(cam_transition_amount, 1.0 if cam_target_transform else 0.0, 2 * delta)
 
 # 	if cam_transition_amount > 0.0:
@@ -68,6 +69,8 @@ var footstep_charge = 0.0
 var stamina = 1.0
 var stamina_cooldown = 0.0
 const sprint_regen = 0.5
+
+var target_fov = 70.0
 
 func update_sprint_meter():
 	if stamina == 1.0:
@@ -90,7 +93,7 @@ func _physics_process(delta: float) -> void:
 		interactable_popup.visible = true
 		interactable_label.text = interactable.action_text
 		if Input.is_action_just_pressed("interact"):
-			interactable_popup.visible = false
+			# interactable_popup.visible = false
 			interactable.interact()
 			if interactable.game_event == Interactable.GameEvent.SLEEP:
 				game_manager.on_sleep()
@@ -106,12 +109,14 @@ func _physics_process(delta: float) -> void:
 
 	# Handle sprinting.
 	var speed = SPEED
+	target_fov = 60.0
 	stamina_cooldown -= delta
 	if Input.is_action_pressed("sprint") and stamina > 0.0:
 		stamina = move_toward(stamina, 0.0, sprint_regen * delta)
 		if stamina == 0.0:
 			stamina_cooldown = 1.5
 		speed *= 2.0
+		target_fov = 70.0
 	else:
 		if stamina_cooldown <= 0.0:
 			stamina = move_toward(stamina, 1.0, sprint_regen * delta)
@@ -124,7 +129,8 @@ func _physics_process(delta: float) -> void:
 	velocity.x = lerp(velocity.x, direction.x * speed, 10 * delta)
 	velocity.z = lerp(velocity.z, direction.z * speed, 10 * delta)
 
-	bob_position  += get_real_velocity().length() * delta * 4
+	bob_position  += get_real_velocity().length() * delta * 5
+
 	bob_intensity = lerp(bob_intensity, 1.0 if get_real_velocity().length() > 0.1 else 0.0, 3 * delta)
 	camera_pivot.position.y = sin(bob_position) * bob_intensity * 0.04
 	footstep_charge += get_real_velocity().length() * delta
