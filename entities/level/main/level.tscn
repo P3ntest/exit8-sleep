@@ -85,6 +85,7 @@ fog_sky_affect = 0.044
 volumetric_fog_enabled = true
 volumetric_fog_density = 0.2982
 volumetric_fog_albedo = Color(0.18359, 0.18359, 0.18359, 1)
+volumetric_fog_sky_affect = 0.821
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5t7ce"]
 resource_name = "Entertainment"
