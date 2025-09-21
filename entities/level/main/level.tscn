@@ -3109,6 +3109,9 @@ shape = SubResource("ConvexPolygonShape3D_pkuc6")
 [node name="RunnerScare" parent="Furniture/Hallway" instance=ExtResource("31_0vge8")]
 transform = Transform3D(-6.50324e-08, 0, 1.48777, 0, 1.48777, 0, -1.48777, 0, -6.50324e-08, -2.22178, -4.84288e-08, 5.41195)
 
+[node name="CollisionShape3D" parent="Furniture/Hallway/RunnerScare/Trigger" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.55125)
+
 [node name="Pictures" parent="Furniture/Hallway" instance=ExtResource("35_dwdhe")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 6.91623, 1.64932, 0.552579)
 
@@ -3504,4 +3507,5 @@ script = ExtResource("58_y4yl1")
 [node name="Calendar3D" parent="." instance=ExtResource("66_inqn4")]
 transform = Transform3D(-0.196491, -0.006302, 1.71778e-08, -0.006302, 0.196491, 5.50938e-10, -1.71866e-08, 8.70755e-17, -0.196592, 1.8271, 1.46458, 0.769749)
 
+[editable path="Furniture/Hallway/RunnerScare"]
 [editable path="Furniture/Hallway/Tucker"]
